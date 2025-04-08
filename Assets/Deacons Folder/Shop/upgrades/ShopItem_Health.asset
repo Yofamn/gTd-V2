@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fefa2b1999be3644ac30344c6c37a37, type: 3}
   m_Name: ShopItem_Health
   m_EditorClassIdentifier: 
-  Category: {fileID: 0}
+  Category: {fileID: 11400000, guid: 2edb26bea6ea0cf46bd7f7a0db366db2, type: 2}
   Name: 
   Description: 
   price: 0
