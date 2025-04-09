@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ShopItem_Health
   m_EditorClassIdentifier: 
   Category: {fileID: 11400000, guid: 2edb26bea6ea0cf46bd7f7a0db366db2, type: 2}
-  Name: 
-  Description: 
+  Name: Health upgrade
+  Description: Increases health by 10%
   price: 0

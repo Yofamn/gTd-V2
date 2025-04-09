@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ShopItem_ Speed
   m_EditorClassIdentifier: 
   Category: {fileID: 11400000, guid: 2edb26bea6ea0cf46bd7f7a0db366db2, type: 2}
-  Name: 
-  Description: 
+  Name: Speed upgrade
+  Description: Increases speed by 15%
   price: 0

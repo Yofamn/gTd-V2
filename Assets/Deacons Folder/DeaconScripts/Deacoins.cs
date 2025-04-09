@@ -8,6 +8,4 @@ namespace TowerDefense{
 }
 }
 
-// coins that only exist in the level your in
-// they reset when you die, or go to the next level
-//used to buy and place towers
+// used to buy upgrades for the player and to buy new guns

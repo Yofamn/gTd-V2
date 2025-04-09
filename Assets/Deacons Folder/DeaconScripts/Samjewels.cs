@@ -8,7 +8,4 @@ namespace TowerDefense{
 }
 }
 
-//currency that always exists
-//used to upgrade towers while in the lobby
-//maybe to unlock new towers
-//upgrade how much you make in deacoins
+//Used to buy consumables in game
