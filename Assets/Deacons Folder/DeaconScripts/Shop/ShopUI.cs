@@ -42,11 +42,14 @@ public class ShopUI : MonoBehaviour
 
         }
 
-        if(ShopCategories.Contains(SelectedCategory)){
-            onCategorySelected(SelectedCategory);
-        }
-        else
+        if(!ShopCategories.Contains(SelectedCategory)){
             SelectedCategory = null;
+        }
+        onCategorySelected(SelectedCategory);
+           
+    } 
+    void RefreshShopUI_Items(){
+
     }
     void onCategorySelected(ShopItemCategory newlySelectedCategory){
         //updata the selection
@@ -54,6 +57,7 @@ public class ShopUI : MonoBehaviour
         foreach(var category in ShopCategories){
             ShopCategoryToUIMap[category].SetIsSelected(category == SelectedCategory);
         }
+        RefreshShopUI_Items();
     }
     public void OnClickedPurchase(){
 
