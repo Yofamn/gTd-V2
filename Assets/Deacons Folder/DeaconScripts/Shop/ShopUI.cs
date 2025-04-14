@@ -12,6 +12,7 @@ public class ShopUI : MonoBehaviour
     [SerializeField] GameObject ItemUIPrefab;
     [SerializeField] List<ShopItems> AvailableItems;
     List<ShopItemCategory> ShopCategories;
+    ShopItemCategory SelectedCategory;
     Dictionary<ShopItemCategory, ShopUI_Category> ShopCategoryToUIMap;
 
     void Start(){
@@ -40,9 +41,19 @@ public class ShopUI : MonoBehaviour
             ShopCategoryToUIMap[category] = categoryUI;
 
         }
-    }
-    void onCategorySelected(ShopItemCategory category){
 
+        if(ShopCategories.Contains(SelectedCategory)){
+            onCategorySelected(SelectedCategory);
+        }
+        else
+            SelectedCategory = null;
+    }
+    void onCategorySelected(ShopItemCategory newlySelectedCategory){
+        //updata the selection
+        SelectedCategory = newlySelectedCategory;
+        foreach(var category in ShopCategories){
+            ShopCategoryToUIMap[category].SetIsSelected(category == SelectedCategory);
+        }
     }
     public void OnClickedPurchase(){
 
