@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Madigan.unity
     guid: 06a5087449bec2b4f91b38cce04daae3
+  - enabled: 1
+    path: Assets/Madigans Folder/Scenes/Title.unity
+    guid: fd31fb324a9636a409f47780af2323ab
+  - enabled: 1
+    path: Assets/Madigans Folder/Scenes/Death Screen.unity
+    guid: 905240725e335a2428ee1ca149b079f1
   m_configObjects: {}
