@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fefa2b1999be3644ac30344c6c37a37, type: 3}
   m_Name: ShopItem_Apple
   m_EditorClassIdentifier: 
-  Category: {fileID: 0}
-  Name: 
-  Description: 
-  price: 0
+  Category: {fileID: 11400000, guid: 683a861509589954684fed76cf509d95, type: 2}
+  Name: Apple
+  Description: apple
+  price: 2

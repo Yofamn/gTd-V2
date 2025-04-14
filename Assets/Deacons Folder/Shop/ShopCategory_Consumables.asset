@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c92d5c81f8a07d419d18f08f4410eb5, type: 3}
   m_Name: ShopCategory_Consumables
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Consumables
