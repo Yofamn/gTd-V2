@@ -13,13 +13,18 @@ public class ShopUI : MonoBehaviour
     [SerializeField] List<ShopItems> AvailableItems;
     List<ShopItemCategory> ShopCategories;
     ShopItemCategory SelectedCategory;
+    ShopItems SelectedItem;
     Dictionary<ShopItemCategory, ShopUI_Category> ShopCategoryToUIMap;
+    Dictionary<ShopItems, ShopUI_Item> ShopItemToUIMap;
 
     void Start(){
         RefreshShopUI();
     }
     void RefreshShopUI(){
-
+        for(int childIndex = CategoryUIRoot.childCount - 1; childIndex >= 0; childIndex--){
+            var childGO = CategoryUIRoot.GetChild(childIndex).gameObject;
+            Destroy(childGO);
+        }
         ShopCategories = new List<ShopItemCategory>();
         ShopCategoryToUIMap = new Dictionary<ShopItemCategory, ShopUI_Category>();
 
@@ -49,13 +54,36 @@ public class ShopUI : MonoBehaviour
            
     } 
     void RefreshShopUI_Items(){
+        for(int childIndex = ItemUIRoot.childCount - 1; childIndex >= 0; childIndex--){
+            var childGO = ItemUIRoot.GetChild(childIndex).gameObject;
+            Destroy(childGO);
+        }
+        ShopItemToUIMap = new Dictionary<ShopItems, ShopUI_Item>();
+        foreach(var item in AvailableItems){
+            if(item.Category!= SelectedCategory)
+                continue;
+            var itemGO = Instantiate(ItemUIPrefab, ItemUIRoot);
+            var itemUI = itemGO.GetComponent<ShopUI_Item>();
 
+            itemUI.Bind(item, onItemSelected);
+            ShopItemToUIMap[item] = itemUI;
+
+        }
     }
     void onCategorySelected(ShopItemCategory newlySelectedCategory){
         //updata the selection
         SelectedCategory = newlySelectedCategory;
         foreach(var category in ShopCategories){
             ShopCategoryToUIMap[category].SetIsSelected(category == SelectedCategory);
+        }
+        RefreshShopUI_Items();
+    }
+    void onItemSelected(ShopItems newlySelectedItem){
+        SelectedItem = newlySelectedItem;
+        foreach(var kvp in ShopItemToUIMap){
+            var item = kvp.Key;
+            var itemUI = kvp.Value;
+            itemUI.SetIsSelected(item == SelectedItem);
         }
         RefreshShopUI_Items();
     }

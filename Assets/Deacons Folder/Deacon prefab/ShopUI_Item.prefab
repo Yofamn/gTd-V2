@@ -414,6 +414,7 @@ GameObject:
   - component: {fileID: 6241113963806180779}
   - component: {fileID: 8430126465189394381}
   - component: {fileID: 5239472745160348819}
+  - component: {fileID: 3296715934845493990}
   m_Layer: 5
   m_Name: ShopUI_Item
   m_TagString: Untagged
@@ -496,3 +497,35 @@ MonoBehaviour:
   ItemName: {fileID: 3134426556769991423}
   Description: {fileID: 4559311540117510034}
   Price: {fileID: 2450411299567238874}
+  BackgroundPanel: {fileID: 8430126465189394381}
+  DefaultColor: {r: 0, g: 0, b: 0, a: 0.4117647}
+  SelectedColor: {r: 0.5849056, g: 0.5324848, b: 0.5324848, a: 0.8352941}
+--- !u!114 &3296715934845493990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6788833959015476022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5239472745160348819}
+          m_TargetAssemblyTypeName: ShopUI_Item, Assembly-CSharp
+          m_MethodName: OnClicked
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
