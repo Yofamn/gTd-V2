@@ -23,5 +23,11 @@ public class ProjectileWithRigidbody : MonoBehaviour
         rb.AddForce(transform.forward * projectileSpeed, ForceMode.Impulse);
     }
         //https://www.youtube.com/watch?app=desktop&v=iuamtM_VJgQ
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "yes" || collision.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
