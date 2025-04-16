@@ -16,6 +16,7 @@ public class ProjectileWithRigidbody : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         Impulse();
+        Invoke("begone", 2);
     }
 
     private void Impulse()
@@ -29,5 +30,9 @@ public class ProjectileWithRigidbody : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    void begone()
+    {
+        Destroy(gameObject);
     }
 }
