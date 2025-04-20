@@ -13,7 +13,6 @@ namespace TowerDefence
         private Gun currentGun;
         private float fireRate;
         private float fireRateDelta;
-        public bool banag = false;
         public Vector3 playerGroundPos;
 
         private void Start()
@@ -61,16 +60,5 @@ namespace TowerDefence
             }
         }
 
-            public bool inRange()
-            {
-                if(Vector3.Distance(transform.position, playerGroundPos) > turretRange)
-                {
-                    return true; //do nothing because player is not in range
-                }
-                else
-                {
-                    return false;
-                }
-            }
         }   
 }
