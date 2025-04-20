@@ -13,6 +13,8 @@ namespace TowerDefence
         private Gun currentGun;
         private float fireRate;
         private float fireRateDelta;
+        public bool banag = false;
+        public Vector3 playerGroundPos;
 
         private void Start()
         {
@@ -25,22 +27,30 @@ namespace TowerDefence
 
         private void Update()
         {
-            Vector3 playerGroundPos = new Vector3(playerTransform.position.x, 
-                                    transform.position.y, playerTransform.position.z);
+           // playerGroundPos = new Vector3(playerTransform.position.x, transform.position.y, playerTransform.position.z);
 
-            //Check if player is not in range, then do nothing
+            //Bang();
+            
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.DrawWireSphere(transform.position, turretRange); //Show a gizmo when selected
+        }
+        public void Bang()
+        {
             if(Vector3.Distance(transform.position, playerGroundPos) > turretRange)
-            {
-                return; //do nothing because player is not in range
-            }
-
+                {
+                    return; //do nothing because player is not in range
+                }
+            //Check if player is not in range, then do nothing
+            playerGroundPos = new Vector3(playerTransform.position.x, transform.position.y, playerTransform.position.z);
             //PLAYER IN RANGE
 
             //Rotate Turret towards player
             Vector3 playerDirection = playerGroundPos - transform.position;
             float turretRotationStep = turretRotationSpeed * Time.deltaTime;
-            Vector3 newLookDirection = Vector3.RotateTowards(transform.forward, playerDirection,
-                                    turretRotationStep, 0f);
+            Vector3 newLookDirection = Vector3.RotateTowards(transform.forward, playerDirection, turretRotationStep, 0f);
             transform.rotation = Quaternion.LookRotation(newLookDirection);
 
             fireRateDelta -= Time.deltaTime;
@@ -49,12 +59,18 @@ namespace TowerDefence
                 currentGun.Fire();
                 fireRateDelta = fireRate;
             }
-            
         }
 
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.DrawWireSphere(transform.position, turretRange); //Show a gizmo when selected
-        }
-    }
+            public bool inRange()
+            {
+                if(Vector3.Distance(transform.position, playerGroundPos) > turretRange)
+                {
+                    return true; //do nothing because player is not in range
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }   
 }

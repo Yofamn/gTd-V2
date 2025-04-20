@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 namespace TowerDefence
 {
@@ -11,22 +13,55 @@ namespace TowerDefence
         public Transform[] waypoints;
         int waypointIndex;
         Vector3 target;
-        // Start is called before the first frame update
+        Turret turret;
+        float range = 5f;
+        public Transform player;
+
         void Start()
         {
+            turret = GetComponent<Turret>();
             agent = GetComponent<NavMeshAgent>();
             UpdateDestination();
         }
-
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
-            if(Vector3.Distance(transform.position, target) < 1)
+
+            float distance = Vector3.Distance(transform.position, player.position);
+
+        
+            //turret.Bang();
+            /*if(turret.inRange())
+            {
+                    Vector3 temp = gameObject.transform.position;
+                    agent.SetDestination(temp);
+                    turret.Bang();
+            }
+            else if(Vector3.Distance(transform.position, target) < 1)
             {
                 IterateWaypointIndex();
                 UpdateDestination();
+            }*/
+            if(Vector3.Distance(transform.position, target) < 1)
+            {
+                if (distance <= range)
+                {
+                    agent.isStopped = true;
+
+                    turret.Bang();
+                }
+                else
+                {
+                    // Player is out of range, resume movement and set a destination
+                    agent.isStopped = false;
+                    IterateWaypointIndex();
+                    UpdateDestination(); 
+                    
+                }
+                
             }
         }
+        
         void UpdateDestination()
         {
             target = waypoints[waypointIndex].position;
