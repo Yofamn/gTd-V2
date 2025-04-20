@@ -159,6 +159,7 @@ MonoBehaviour:
   - {fileID: 2039285932}
   - {fileID: 974534467}
   - {fileID: 2086673915}
+  player: {fileID: 0}
 --- !u!23 &87561201
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2172,6 +2173,7 @@ MonoBehaviour:
   - {fileID: 2039285932}
   - {fileID: 974534467}
   - {fileID: 2086673915}
+  player: {fileID: 0}
 --- !u!195 &1666275847
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2228,7 +2230,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730179631}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecc0ac7ff04cec64dae5cf1c5e449155, type: 3}
   m_Name: 
@@ -2237,6 +2239,7 @@ MonoBehaviour:
   - {fileID: 2039285932}
   - {fileID: 974534467}
   - {fileID: 2086673915}
+  player: {fileID: 259011113}
 --- !u!1 &1852223762
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,6 +2650,14 @@ PrefabInstance:
     - target: {fileID: 3787089747317225702, guid: e18e4547b0332fc4d9e6563499b37029, type: 3}
       propertyPath: m_Name
       value: Soldat 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3812404092251944417, guid: e18e4547b0332fc4d9e6563499b37029, type: 3}
+      propertyPath: banag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3812404092251944417, guid: e18e4547b0332fc4d9e6563499b37029, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
