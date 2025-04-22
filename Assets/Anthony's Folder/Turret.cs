@@ -53,6 +53,7 @@ namespace TowerDefence
             transform.rotation = Quaternion.LookRotation(newLookDirection);
 
             fireRateDelta -= Time.deltaTime;
+            
             if(fireRateDelta <= 0)
             {
                 currentGun.Fire();
