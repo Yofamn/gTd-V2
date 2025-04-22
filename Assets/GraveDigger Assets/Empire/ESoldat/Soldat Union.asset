@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Soldat Union
   m_EditorClassIdentifier: 
   fireRate: 0.25
-  damage: 1
+  damage: 2
   cost: 1

@@ -49,16 +49,32 @@ namespace TowerDefense
         {
             firing = true;
 
-            while(enemiesInRange.Count > 0)
+            /*while(enemiesInRange.Count > 0)
             {
                 removeDestroyedEnemies();
-                if(enemiesInRange.Count> 0)
+                if(enemiesInRange.Count > 0)
                 {
                     enemeyTarget = enemiesInRange[0];
                     animator.SetTrigger("Fire");
                 }
                 
                 yield return new WaitForSeconds(towerType.fireRate);
+            }*/
+
+            while(enemiesInRange.Count > 0)
+            {
+                if(!enemiesInRange[0]) enemiesInRange.RemoveAt(0);
+                else Health.TryDamage(enemiesInRange[0], towerType.damage);
+
+                yield return new WaitForSeconds(towerType.fireRate);
+
+                int x = 0;
+                while(x < enemiesInRange.Count)
+                {
+                    if(!enemiesInRange[0]) enemiesInRange.RemoveAt(0);
+                    else x++;
+                }
+
             }
 
             firing = false;
