@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Madigans Folder/Scenes/Death Screen.unity
     guid: 905240725e335a2428ee1ca149b079f1
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: a5b2abd94c17776459215eb8d96637cb
   m_configObjects: {}
