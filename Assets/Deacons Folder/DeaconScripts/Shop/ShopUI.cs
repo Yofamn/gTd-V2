@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.AI;
 public class ShopUI : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI AvailableFunds;
@@ -36,6 +37,10 @@ public class ShopUI : MonoBehaviour
         }
         else
             PurchaseButton.interactable =  false;
+        foreach(var kvp in ShopItemToUIMap){
+            var item = kvp.Key;
+            var itemUI = kvp.Value;
+        }
     }
     void RefreshShopUI_Categories(){
         for(int childIndex = CategoryUIRoot.childCount - 1; childIndex >= 0; childIndex--){
