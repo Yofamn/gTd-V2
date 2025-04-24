@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerDefense;
 using UnityEngine;
 
 public interface IPurchaser{
@@ -13,16 +14,15 @@ public class Purchaser : MonoBehaviour, IPurchaser
 
     public float GetCurrentFunds()
     {
-        return CurrentFunds;
+        return CoinManager.Instance.GetCoins();
     }
 
     public bool SpendFunds(int amount)
     {
-        if(CurrentFunds >= amount){ CurrentFunds -= amount; return true;}
-        return false;
+        return CoinManager.Instance.SpendCoins(amount);
     }
     public void AddFunds(int amount){
-        CurrentFunds += amount;
+        CoinManager.Instance.AddCoins(amount);
     }
 
     // Start is called before the first frame update
