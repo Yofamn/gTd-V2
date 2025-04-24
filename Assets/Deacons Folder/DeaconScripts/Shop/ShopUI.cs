@@ -109,7 +109,8 @@ public class ShopUI : MonoBehaviour
         RefreshShopUI_Common();
     }
     public void OnClickedPurchase(){
-
+        CurrentPurchaser.SpendFunds(SelectedItem.price);
+        RefreshShopUI_Common();
     }
     public void OnClickedExit(){
 

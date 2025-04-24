@@ -943,7 +943,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 513769130}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2056215589}
+        m_TargetAssemblyTypeName: ShopUI, Assembly-CSharp
+        m_MethodName: OnClickedExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &513769130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1061,6 +1073,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611648239}
   m_CullTransparentMesh: 1
+--- !u!1 &615604509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 615604511}
+  - component: {fileID: 615604510}
+  m_Layer: 0
+  m_Name: Purchaser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &615604510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615604509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32496d34e10f1a418783e7eef87db1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentFunds: 50
+--- !u!4 &615604511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615604509}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &744326023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,7 +1368,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 935570039}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2056215589}
+        m_TargetAssemblyTypeName: ShopUI, Assembly-CSharp
+        m_MethodName: OnClickedPurchase
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &935570039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2903,6 +2972,7 @@ MonoBehaviour:
   AvailableFunds: {fileID: 48676379}
   CategoryUIRoot: {fileID: 1091375101}
   ItemUIRoot: {fileID: 1975645172}
+  PurchaseButton: {fileID: 935570038}
   CategoryUIPrefab: {fileID: 347196853566570171, guid: 2b9512c0159eb09499b1f17aa0bf2139, type: 3}
   ItemUIPrefab: {fileID: 6788833959015476022, guid: f1b81d7bf9b80f64d8fc96d7d6bb840b, type: 3}
   AvailableItems:
@@ -3220,3 +3290,4 @@ SceneRoots:
   - {fileID: 2144100157}
   - {fileID: 223235091}
   - {fileID: 1299159895}
+  - {fileID: 615604511}
