@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
+using UnityEngine.AI;
+using Unity.VisualScripting;
 public class ShopUI : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI AvailableFunds;
     [SerializeField] Transform CategoryUIRoot;
     [SerializeField] Transform ItemUIRoot;
-
+    [SerializeField] Button PurchaseButton;
     [SerializeField] GameObject CategoryUIPrefab;
     [SerializeField] GameObject ItemUIPrefab;
     [SerializeField] List<ShopItems> AvailableItems;
+    IPurchaser CurrentPurchaser;
     List<ShopItemCategory> ShopCategories;
     ShopItemCategory SelectedCategory;
     ShopItems SelectedItem;
@@ -18,9 +22,37 @@ public class ShopUI : MonoBehaviour
     Dictionary<ShopItems, ShopUI_Item> ShopItemToUIMap;
 
     void Start(){
-        RefreshShopUI();
+        //Begin testing code
+        CurrentPurchaser = FindObjectOfType<Purchaser>();
+        //end testing code
+        RefreshShopUI_Common();
+        RefreshShopUI_Categories();
     }
-    void RefreshShopUI(){
+    void RefreshShopUI_Common(){
+        if(CurrentPurchaser != null)
+            AvailableFunds.text = $"{(CurrentPurchaser.GetCurrentFunds())}";
+        else 
+            AvailableFunds.text = string.Empty;
+        if(CurrentPurchaser != null && SelectedItem != null && CurrentPurchaser.GetCurrentFunds() >= SelectedItem.price){
+             PurchaseButton.interactable =  true;
+        }
+        else
+            PurchaseButton.interactable =  false;
+        if(ShopItemToUIMap != null){
+            foreach(var kvp in ShopItemToUIMap){
+                var item = kvp.Key;
+                var itemUI = kvp.Value;
+                if(CurrentPurchaser != null){
+                    itemUI.SetCanAfford(item.price <= CurrentPurchaser.GetCurrentFunds());
+                }
+                else
+                    itemUI.SetCanAfford(false);
+                
+            }
+        }
+        
+    }
+    void RefreshShopUI_Categories(){
         for(int childIndex = CategoryUIRoot.childCount - 1; childIndex >= 0; childIndex--){
             var childGO = CategoryUIRoot.GetChild(childIndex).gameObject;
             Destroy(childGO);
@@ -69,8 +101,13 @@ public class ShopUI : MonoBehaviour
             ShopItemToUIMap[item] = itemUI;
 
         }
+        RefreshShopUI_Common();
     }
     void onCategorySelected(ShopItemCategory newlySelectedCategory){
+        //clear selected item
+        if(SelectedCategory != null && newlySelectedCategory != null && SelectedCategory != newlySelectedCategory){
+            SelectedItem = null;
+        }
         //updata the selection
         SelectedCategory = newlySelectedCategory;
         foreach(var category in ShopCategories){
@@ -85,10 +122,11 @@ public class ShopUI : MonoBehaviour
             var itemUI = kvp.Value;
             itemUI.SetIsSelected(item == SelectedItem);
         }
-        RefreshShopUI_Items();
+        RefreshShopUI_Common();
     }
     public void OnClickedPurchase(){
-
+        CurrentPurchaser.SpendFunds(SelectedItem.price);
+        RefreshShopUI_Common();
     }
     public void OnClickedExit(){
 

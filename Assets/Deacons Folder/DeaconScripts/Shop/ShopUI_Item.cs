@@ -28,4 +28,8 @@ public class ShopUI_Item : MonoBehaviour
     public void OnClicked(){
         OnSelectedFn.Invoke(Item);
     }
+    public void SetCanAfford(bool canAfford){
+        Price.fontStyle = canAfford ? FontStyles.Normal: FontStyles.Strikethrough;
+        Price.color = canAfford ? Color.white: Color.red;
+    }
 }
