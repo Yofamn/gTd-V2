@@ -88,6 +88,10 @@ public class ShopUI : MonoBehaviour
         }
     }
     void onCategorySelected(ShopItemCategory newlySelectedCategory){
+        //clear selected item
+        if(SelectedCategory != null && newlySelectedCategory != null && SelectedCategory != newlySelectedCategory){
+            SelectedItem = null;
+        }
         //updata the selection
         SelectedCategory = newlySelectedCategory;
         foreach(var category in ShopCategories){
@@ -102,7 +106,7 @@ public class ShopUI : MonoBehaviour
             var itemUI = kvp.Value;
             itemUI.SetIsSelected(item == SelectedItem);
         }
-        RefreshShopUI_Items();
+        RefreshShopUI_Common();
     }
     public void OnClickedPurchase(){
 
