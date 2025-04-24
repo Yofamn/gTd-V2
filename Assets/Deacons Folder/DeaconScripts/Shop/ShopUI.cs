@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.AI;
+using Unity.VisualScripting;
 public class ShopUI : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI AvailableFunds;
@@ -37,10 +38,19 @@ public class ShopUI : MonoBehaviour
         }
         else
             PurchaseButton.interactable =  false;
-        foreach(var kvp in ShopItemToUIMap){
-            var item = kvp.Key;
-            var itemUI = kvp.Value;
+        if(ShopItemToUIMap != null){
+            foreach(var kvp in ShopItemToUIMap){
+                var item = kvp.Key;
+                var itemUI = kvp.Value;
+                if(CurrentPurchaser != null){
+                    itemUI.SetCanAfford(item.price <= CurrentPurchaser.GetCurrentFunds());
+                }
+                else
+                    itemUI.SetCanAfford(false);
+                
+            }
         }
+        
     }
     void RefreshShopUI_Categories(){
         for(int childIndex = CategoryUIRoot.childCount - 1; childIndex >= 0; childIndex--){
@@ -91,6 +101,7 @@ public class ShopUI : MonoBehaviour
             ShopItemToUIMap[item] = itemUI;
 
         }
+        RefreshShopUI_Common();
     }
     void onCategorySelected(ShopItemCategory newlySelectedCategory){
         //clear selected item
