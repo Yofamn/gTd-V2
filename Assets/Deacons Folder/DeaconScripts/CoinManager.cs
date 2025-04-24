@@ -7,19 +7,18 @@ namespace TowerDefense{
     {
         public static CoinManager Instance;
 
-        public int coins = 0;
+        private int coins = 0;
 
         private void Awake()
         {
-            // Singleton logic
             if (Instance == null)
             {
                 Instance = this;
-                DontDestroyOnLoad(gameObject); // Keep this object alive across scenes
+                DontDestroyOnLoad(gameObject);
             }
             else
             {
-                Destroy(gameObject); // Prevent duplicates
+                Destroy(gameObject);
             }
         }
 
@@ -36,6 +35,11 @@ namespace TowerDefense{
                 return true;
             }
             return false;
+        }
+
+        public int GetCoins()
+        {
+            return coins;
         }
     }
 
