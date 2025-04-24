@@ -9,7 +9,6 @@ namespace TowerDefense
     public class Enemy_SO : ScriptableObject
     {
         public float Speed = 1;
-
     }
 
 }

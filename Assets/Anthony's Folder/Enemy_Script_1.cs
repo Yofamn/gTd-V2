@@ -9,9 +9,10 @@ namespace TowerDefense
     {
         public Path path;
         public int index = 0;
-        
+        Health health;
         public Enemy_SO enemy_SO;
-        
+        Spawner spawner;
+
         void Start()
         {
             path = FindObjectOfType<Path>();
@@ -35,12 +36,12 @@ namespace TowerDefense
             
             // Uncomment after player/health script is in.
             
-            //Player player = FindObjectOfType<Player>();
-            //Health.TryDamage(player.gameObject,damage);
-            //Destroy(gameObject);
+            Player player = FindObjectOfType<Player>();
+            Health.TryDamage(player.gameObject, health.getHealth());
+            Destroy(gameObject);
 
             //Delete Later
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }

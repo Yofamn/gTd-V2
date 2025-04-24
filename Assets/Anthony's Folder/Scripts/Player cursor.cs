@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerDefence;
 using UnityEngine;
 
 namespace TowerDefense
@@ -10,7 +11,7 @@ namespace TowerDefense
         public int gold;
         MyGrid grid;
         Cursor cursor;
-
+        PlyInteract plyInteract;
         private void Awake()
         {
             grid = FindObjectOfType<MyGrid>();
@@ -34,5 +35,12 @@ namespace TowerDefense
             gold -=Tower_SO.GetCost(towerPrefab);
             return true;
         }  
+        void HandleInteractionInp()
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                plyInteract.tryInteract();
+            }
+        }
     }
 }

@@ -1,22 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerDefense;
 using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public bool spawn = true;
+    public bool spawn = false;
     public GameObject[] prefab;
     public float spawnRate = 1f;
-    private int currentEnemy;
+    public int currentEnemy;
+
 
     Coroutine spawner;
     
     // Start is called before the first frame update
     void Start()
     {
-        spawner = StartCoroutine(Spawn());
+        if(spawn)
+        {
+            spawner = StartCoroutine(Spawn());
+        }
     }
 
     void Update()
@@ -34,9 +39,20 @@ public class Spawner : MonoBehaviour
             Instantiate(prefab[currentEnemy], transform.position, transform.rotation);
 
             currentEnemy ++;
-                
             yield return new WaitForSeconds(spawnRate);
         }
         
+    }
+    public int getEnemyCount()
+    {
+        return currentEnemy;
+    }
+    public void changeEnemyCount(int yes)
+    {
+        currentEnemy = yes;
+    }
+    public void restart()
+    {
+        spawn = true;
     }
 }

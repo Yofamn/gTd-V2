@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace TowerDefense{
     public class Health : MonoBehaviour
-{
+    {
      public int currentHealth;
         void TakeDamage(int damage)
         {
@@ -13,6 +13,7 @@ namespace TowerDefense{
             if(currentHealth <= 0)
             {
                 if(gameObject.CompareTag("Enemy")){
+
                     EnemyDeath();
                 }
                 else if(gameObject.CompareTag("Player")){
@@ -33,7 +34,10 @@ namespace TowerDefense{
 
             //send to main screen
         }
-
+        public int getHealth()
+        {
+            return currentHealth;
+        }
     }
 
 // make a health class for tower defense
