@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 public class ShopUI : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI AvailableFunds;
     [SerializeField] Transform CategoryUIRoot;
     [SerializeField] Transform ItemUIRoot;
-
+    [SerializeField] Button PurchaseButton;
     [SerializeField] GameObject CategoryUIPrefab;
     [SerializeField] GameObject ItemUIPrefab;
     [SerializeField] List<ShopItems> AvailableItems;
+    IPurchaser CurrentPurchaser;
     List<ShopItemCategory> ShopCategories;
     ShopItemCategory SelectedCategory;
     ShopItems SelectedItem;
@@ -18,9 +20,24 @@ public class ShopUI : MonoBehaviour
     Dictionary<ShopItems, ShopUI_Item> ShopItemToUIMap;
 
     void Start(){
-        RefreshShopUI();
+        //Begin testing code
+        CurrentPurchaser = FindObjectOfType<Purchaser>();
+        //end testing code
+        RefreshShopUI_Common();
+        RefreshShopUI_Categories();
     }
-    void RefreshShopUI(){
+    void RefreshShopUI_Common(){
+        if(CurrentPurchaser != null)
+            AvailableFunds.text = $"{(CurrentPurchaser.GetCurrentFunds())}";
+        else 
+            AvailableFunds.text = string.Empty;
+        if(CurrentPurchaser != null && SelectedItem != null && CurrentPurchaser.GetCurrentFunds() >= SelectedItem.price){
+             PurchaseButton.interactable =  true;
+        }
+        else
+            PurchaseButton.interactable =  false;
+    }
+    void RefreshShopUI_Categories(){
         for(int childIndex = CategoryUIRoot.childCount - 1; childIndex >= 0; childIndex--){
             var childGO = CategoryUIRoot.GetChild(childIndex).gameObject;
             Destroy(childGO);
