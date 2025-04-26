@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[Serializable]
+/*[Serializable]
 public class InventoryItem : MonoBehaviour
 {
  public InventoryItemData data {get; private set;}
@@ -26,3 +26,4 @@ public class InventoryItem : MonoBehaviour
     stackSize --;
  }
 }
+*/

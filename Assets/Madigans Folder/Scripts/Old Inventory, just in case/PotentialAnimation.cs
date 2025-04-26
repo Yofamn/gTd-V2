@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PotentialAnimation : MonoBehaviour
+/*public class PotentialAnimation : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,3 +16,4 @@ public class PotentialAnimation : MonoBehaviour
         
     }
 }
+*/

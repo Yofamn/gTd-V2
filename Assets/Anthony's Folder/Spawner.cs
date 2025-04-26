@@ -11,31 +11,16 @@ public class Spawner : MonoBehaviour
     public GameObject[] prefab;
     public float spawnRate = 1f;
     public int currentEnemy;
-
-
-    Coroutine spawner;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        if(spawn)
-        {
-            spawner = StartCoroutine(Spawn());
-        }
-    }
-
-    void Update()
-    {
-        if(currentEnemy > prefab.Length-1)
-        {
-            StopCoroutine(spawner);
-        }
-    }
-    // Update is called once per frame
     IEnumerator Spawn()
     {
         while(spawn)
         {
+            if (currentEnemy > prefab.Length - 1)
+            {
+            spawn = false;
+            yield break;
+            }
             Instantiate(prefab[currentEnemy], transform.position, transform.rotation);
 
             currentEnemy ++;
@@ -43,16 +28,11 @@ public class Spawner : MonoBehaviour
         }
         
     }
-    public int getEnemyCount()
-    {
-        return currentEnemy;
-    }
-    public void changeEnemyCount(int yes)
-    {
-        currentEnemy = yes;
-    }
+
     public void restart()
     {
+        currentEnemy = 0;
         spawn = true;
+        StartCoroutine(Spawn());
     }
 }
