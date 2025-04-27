@@ -16028,7 +16028,7 @@ PrefabInstance:
     - target: {fileID: 2018773063455361509, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
       propertyPath: towerPrefab
       value: 
-      objectReference: {fileID: 3787089747317225702, guid: 3c41707745b94254e9feb70367c89160, type: 3}
+      objectReference: {fileID: 4015088924154500602, guid: b924656f2f289024a9612c2c31bd6847, type: 3}
     - target: {fileID: 7726259095146717963, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
       propertyPath: m_LocalPosition.x
       value: -61

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TowerDefense
 {
-    public class MyGrid : MonoBehaviour
+    public class MyGridV2 : MonoBehaviour
     {
         private Dictionary<Vector3Int, GameObject> gameObjects = new Dictionary<Vector3Int, GameObject>();
 

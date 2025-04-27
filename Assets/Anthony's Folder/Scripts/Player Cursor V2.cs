@@ -5,16 +5,16 @@ using UnityEngine;
 
 namespace TowerDefense
 {
-    public class Player : MonoBehaviour
+    public class Player2 : MonoBehaviour
     {
         public GameObject towerPrefab;
         public int gold;
-        private MyGrid grid;
+        private MyGridV2 grid;
         private Cursor cursor;
 
         private void Awake()
         {
-            grid = FindObjectOfType<MyGrid>();
+            grid = FindObjectOfType<MyGridV2>();
             cursor = GetComponent<Cursor>();
         }
 
@@ -27,7 +27,7 @@ namespace TowerDefense
             }
         }
 
-        public bool TryPlaceTower(MyGrid grid, Vector3Int tileCoords)
+        public bool TryPlaceTower(MyGridV2 grid, Vector3Int tileCoords)
         {
             if (gold < Tower_SO.GetCost(towerPrefab)) return false;
             if (grid.Occupied(tileCoords)) return false;

@@ -4283,8 +4283,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: 1
-  prefab: {fileID: 6457009561746304043, guid: 2590663a2543c1d42a9ef4c6b4bf8290, type: 3}
+  prefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnRate: 3
+  currentEnemy: 0
 --- !u!4 &283057977
 Transform:
   m_ObjectHideFlags: 0
@@ -13312,8 +13316,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: 1
-  prefab: {fileID: 6457009561746304043, guid: 2590663a2543c1d42a9ef4c6b4bf8290, type: 3}
+  prefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnRate: 1
+  currentEnemy: 0
 --- !u!4 &899844306
 Transform:
   m_ObjectHideFlags: 0
@@ -19018,8 +19026,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: 1
-  prefab: {fileID: 6457009561746304043, guid: 2590663a2543c1d42a9ef4c6b4bf8290, type: 3}
+  prefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnRate: 3
+  currentEnemy: 0
 --- !u!4 &1263924589
 Transform:
   m_ObjectHideFlags: 0
@@ -28778,15 +28790,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2018773063455361509, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
       propertyPath: gold
-      value: 2
+      value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 2018773063455361509, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 639396978566363287, guid: 44d45e14bed52e2438f6af1304713e68, type: 3}
     - target: {fileID: 7726259095146717963, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
       propertyPath: m_LocalPosition.x
       value: -54.25
       objectReference: {fileID: 0}
     - target: {fileID: 7726259095146717963, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.675
+      value: 1.425
       objectReference: {fileID: 0}
     - target: {fileID: 7726259095146717963, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
       propertyPath: m_LocalPosition.z

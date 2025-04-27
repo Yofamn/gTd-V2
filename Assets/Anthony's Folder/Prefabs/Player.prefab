@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7726259095146717963}
   - component: {fileID: 4097533490220338125}
   - component: {fileID: 2018773063455361509}
+  - component: {fileID: -5032506839213285162}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8713975823234950178}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.07499999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -60,6 +61,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 3787089747317225702, guid: 3c41707745b94254e9feb70367c89160, type: 3}
   gold: 100
+--- !u!114 &-5032506839213285162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8713975823234950178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a596022477cac4ba5a60af6042dcba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1001 &4584785499802979215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78,7 +92,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4097318450498223963, guid: bdbb8b28503160743b6fad38e500eba8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4097318450498223963, guid: bdbb8b28503160743b6fad38e500eba8, type: 3}
       propertyPath: m_LocalPosition.z
