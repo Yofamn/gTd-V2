@@ -797,7 +797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 0}
   index: 0
-  enemy_SO: {fileID: 11400000, guid: 6f0682abd199d3140bec9a7d980342f1, type: 2}
+  enemy_SO: {fileID: 11400000, guid: c4f9da0aa0c5f19469c393ba2bc10960, type: 2}
 --- !u!135 &-2401491530810387652
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a596022477cac4ba5a60af6042dcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
+  currentHealth: 50
 --- !u!1 &1770432904698056249
 GameObject:
   m_ObjectHideFlags: 0
