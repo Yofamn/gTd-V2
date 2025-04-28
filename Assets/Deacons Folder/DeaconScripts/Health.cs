@@ -6,38 +6,41 @@ using UnityEngine;
 namespace TowerDefense{
     public class Health : MonoBehaviour
     {
-     public int currentHealth;
-        void TakeDamage(int damage)
-        {
-            currentHealth -= damage;
-            if(currentHealth <= 0)
+        CoinManager coinManager;
+        
+        public int currentHealth;
+            void TakeDamage(int damage)
             {
-                if(gameObject.CompareTag("Enemy")){
+                currentHealth -= damage;
+                if(currentHealth <= 0)
+                {
+                    if(gameObject.CompareTag("Enemy")){
 
-                    EnemyDeath();
+                        EnemyDeath();
+                    }
+                    else if(gameObject.CompareTag("Player")){
+                        PlayerDeath();
+                    }
                 }
-                else if(gameObject.CompareTag("Player")){
-                    PlayerDeath();
-                }
+            }   
+            public static void TryDamage(GameObject target, int damage)
+            {
+                Health targethealth = target.GetComponent<Health>();
+                if (target != null) {targethealth.TakeDamage(damage); }
             }
-        }   
-        public static void TryDamage(GameObject target, int damage)
-        {
-            Health targethealth = target.GetComponent<Health>();
-            if (target != null) {targethealth.TakeDamage(damage); }
-        }
-        public void EnemyDeath(){
-            Destroy(gameObject);
-            // death animation or sound
-        }
-        public void PlayerDeath(){
+            public void EnemyDeath(){
 
-            //send to main screen
-        }
-        public int getHealth()
-        {
-            return currentHealth;
-        }
+                Destroy(gameObject);
+                // death animation or sound
+            }
+            public void PlayerDeath(){
+
+                //send to main screen
+            }
+            public int getHealth()
+            {
+                return currentHealth;
+            }
     }
 
 // make a health class for tower defense
