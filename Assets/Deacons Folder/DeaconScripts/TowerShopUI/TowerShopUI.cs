@@ -1,50 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 namespace TowerDefense
 {
     public class TowerShopUI : MonoBehaviour
     {
-        [SerializeField] private GameObject towersMenuPanel;
-        [SerializeField] private List<TowerButton> towerButtons;
+        [SerializeField] private List<Button> towerButtons;
+        [SerializeField] private List<GameObject> towerPrefabs; // Prefabs that already have Tower script attached
 
         private void Start()
         {
-            towersMenuPanel.SetActive(false);
-
-            foreach (TowerButton button in towerButtons)
+            for (int i = 0; i < towerButtons.Count; i++)
             {
-                button.button.onClick.AddListener(() => SelectTower(button.towerPrefab));
+                int index = i;
+                towerButtons[i].onClick.AddListener(() => AttemptToBuyTower(index));
             }
         }
 
-        public void OpenTowersMenu()
+        private void AttemptToBuyTower(int index)
         {
-            towersMenuPanel.SetActive(true);
-        }
+            GameObject towerPrefab = towerPrefabs[index];
+            int towerCost = Tower_SO.GetCost(towerPrefab);
 
-        public void CloseTowersMenu()
-        {
-            towersMenuPanel.SetActive(false);
-        }
-
-        private void SelectTower(GameObject towerPrefab)
-        {
-            Player player = FindObjectOfType<Player>();
-            if (player != null)
+            if (CoinManager.Instance.GetCoins() >= towerCost)
             {
-                player.towerPrefab = towerPrefab;
-            }
-            towersMenuPanel.SetActive(false);
-        }
-    }
+                CoinManager.Instance.SpendCoins(towerCost); // Spend coins
 
-    [System.Serializable]
-    public class TowerButton
-    {
-        public Button button;
-        public GameObject towerPrefab;
+                Player player = FindObjectOfType<Player>();
+
+                if (player != null)
+                {
+                    player.towerPrefab = towerPrefab;
+                }
+            }
+            else
+            {
+                Debug.Log("Not enough gold!");
+            }
+        }
     }
 }
