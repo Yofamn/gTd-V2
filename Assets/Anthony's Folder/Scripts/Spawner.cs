@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using TowerDefense;
 using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting;
@@ -8,22 +9,27 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public bool spawn = false;
-    public GameObject[] prefab;
-    public GameObject[] prefabV2;
+    public GameObject[] WaveOne;
+    public GameObject[] WaveTwo;
     public float spawnRate = 1f;
-    public int currentEnemy;
+    int currentEnemy;
     int waveCounter;
-    
+    GameObject button;
+
+    void Start()
+    {
+        button = GameObject.Find("SpawnWave");
+    }
     IEnumerator Spawn()
     {
         while(spawn)
         {
-            if (currentEnemy > prefab.Length - 1)
+            if (currentEnemy > WaveOne.Length - 1)
             {
             spawn = false;
             yield break;
             }
-            Instantiate(prefab[currentEnemy], transform.position, transform.rotation);
+            Instantiate(WaveOne[currentEnemy], transform.position, transform.rotation);
 
             currentEnemy ++;
             yield return new WaitForSeconds(spawnRate);
@@ -34,12 +40,12 @@ public class Spawner : MonoBehaviour
     {
         while(spawn)
         {
-            if (currentEnemy > prefabV2.Length - 1)
+            if (currentEnemy > WaveTwo.Length - 1)
             {
                 spawn = false;
                 yield break;
             }
-            Instantiate(prefabV2[currentEnemy], transform.position, transform.rotation);
+            Instantiate(WaveTwo[currentEnemy], transform.position, transform.rotation);
 
             currentEnemy ++;
             yield return new WaitForSeconds(spawnRate);
@@ -62,6 +68,11 @@ public class Spawner : MonoBehaviour
             StartCoroutine(SpawnWave2());
             waveCounter = 0;
         }
-        
+        Invoke("buttonAppear", 8);
+    }
+
+    public void buttonAppear()
+    {
+        button.SetActive(true);
     }
 }
