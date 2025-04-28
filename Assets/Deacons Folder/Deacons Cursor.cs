@@ -20,7 +20,7 @@ namespace TowerDefense{
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Vector3Int tileCoords = MyGridV2.WorldToGrid(cursor.transform.position);
+                Vector3Int tileCoords = MyGrid.WorldToGrid(cursor.transform.position);
                 TryPlaceTower(grid, tileCoords);
             }
         }
