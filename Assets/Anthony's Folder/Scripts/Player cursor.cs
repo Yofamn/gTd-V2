@@ -8,6 +8,7 @@ namespace TowerDefense
     public class Player : MonoBehaviour
     {
         public GameObject towerPrefab;
+        public GameObject[] towerSlots;
         public int gold;
         private MyGrid grid;
         private Cursor cursor;
@@ -22,7 +23,7 @@ namespace TowerDefense
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Vector3Int tileCoords = MyGridV2.WorldToGrid(cursor.transform.position);
+                Vector3Int tileCoords = MyGrid.WorldToGrid(cursor.transform.position);
                 TryPlaceTower(grid, tileCoords);
             }
         }

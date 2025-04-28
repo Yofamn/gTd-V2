@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using TowerDefence;
 using UnityEngine;
 
-namespace TowerDefense
-{
-    public class Player2 : MonoBehaviour
+namespace TowerDefense{
+    public class DeaconsCursor : MonoBehaviour
     {
         public GameObject towerPrefab;
-        public int gold;
-        private MyGridV2 grid;
+        private MyGrid grid;
         private Cursor cursor;
 
         private void Awake()
         {
-            grid = FindObjectOfType<MyGridV2>();
+            grid = FindObjectOfType<MyGrid>();
             cursor = GetComponent<Cursor>();
         }
 
@@ -22,14 +20,16 @@ namespace TowerDefense
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Vector3Int tileCoords = MyGridV2.WorldToGrid(cursor.transform.position);
+                Vector3Int tileCoords = MyGrid.WorldToGrid(cursor.transform.position);
                 TryPlaceTower(grid, tileCoords);
             }
         }
 
-        public bool TryPlaceTower(MyGridV2 grid, Vector3Int tileCoords)
+        public bool TryPlaceTower(MyGrid grid, Vector3Int tileCoords)
         {
-            if (gold < Tower_SO.GetCost(towerPrefab)) return false;
+            int towerCost = Tower_SO.GetCost(towerPrefab);
+
+            if (CoinManager.Instance.GetCoins() < towerCost) return false;
             if (grid.Occupied(tileCoords)) return false;
 
             // Get center of the tile
@@ -47,11 +47,18 @@ namespace TowerDefense
                 worldPosition.y = 0f; // fallback
             }
 
+            // Place the tower
             GameObject newTower = Instantiate(towerPrefab, worldPosition, Quaternion.identity);
 
+            // Mark the tile as occupied
             grid.Add(tileCoords, newTower);
-            gold -= Tower_SO.GetCost(towerPrefab);
+
+            // Subtract the cost from CoinManager
+            CoinManager.Instance.SpendCoins(towerCost);
+
             return true;
         }
     }
+
+
 }
