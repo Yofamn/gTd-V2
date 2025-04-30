@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     }
     public static void LoadScene(string newSceneName){
         SceneManager.LoadScene(newSceneName);
+        Cursor.lockState = CursorLockMode.None;
     }
     public static void Quit(){
         Application.Quit();
