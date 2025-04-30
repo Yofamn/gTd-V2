@@ -1,71 +1,82 @@
-using System.Collections;
-using System.Collections.Generic;
-using TowerDefence;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace TowerDefense{
+namespace TowerDefense
+{
     public class DeaconsCursor : MonoBehaviour
     {
+        [Header("Placement Settings")]
         public GameObject towerPrefab;
-        private MyGrid grid;
-        private Cursor cursor;
-
         [SerializeField] private LayerMask buildableLayer;
+
+        private MyGrid grid;
 
         private void Awake()
         {
             grid = FindObjectOfType<MyGrid>();
-            cursor = GetComponent<Cursor>();
+            if (grid == null)
+                Debug.LogError("No MyGrid found in scene!");
         }
 
         private void Update()
         {
+            Vector3Int tileCoords = GetTargetTile();
+            transform.position = MyGrid.GridToWorld(tileCoords);
+
+            if (towerPrefab == null) return;
+
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
-                Vector3Int tileCoords = MyGrid.WorldToGrid(cursor.transform.position);
-                TryPlaceTower(grid, tileCoords);
+                TryPlaceTower(tileCoords);
             }
         }
 
-        public bool TryPlaceTower(MyGrid grid, Vector3Int tileCoords)
+        private Vector3Int GetTargetTile()
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit hit, 100f, buildableLayer))
+            {
+                return MyGrid.WorldToGrid(hit.point + hit.normal * 0.5f);
+            }
+            return Vector3Int.zero;
+        }
+
+        private void TryPlaceTower(Vector3Int tileCoords)
         {
             int towerCost = Tower_SO.GetCost(towerPrefab);
 
-            if (CoinManager.Instance.GetCoins() < towerCost) return false;
-            if (grid.Occupied(tileCoords)) return false;
+            if (CoinManager.Instance.GetCoins() < towerCost)
+            {
+                Debug.Log("Not enough gold to place tower!");
+                return;
+            }
 
-            // Get center of the tile
+            if (grid.Occupied(tileCoords))
+            {
+                Debug.Log("Tile already occupied!");
+                return;
+            }
+
             Vector3 worldPosition = MyGrid.GridToWorld(tileCoords);
 
-            // Raycast down to find ground
-            RaycastHit hit;
-            Vector3 rayOrigin = new Vector3(worldPosition.x, 50f, worldPosition.z); // start raycast from high up
-            if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 100f, buildableLayer))
+            // Adjust Y with raycast
+            Vector3 rayOrigin = new Vector3(worldPosition.x, 50f, worldPosition.z);
+            if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, 100f, buildableLayer))
             {
-                    if (Vector3.Angle(hit.normal, Vector3.up) > 5f) 
-                    {
-                        return false; // Don't allow placement if the surface is angled
-                    }
+                if (Vector3.Angle(hit.normal, Vector3.up) > 5f)
+                {
+                    Debug.Log("Surface too steep to build.");
+                    return;
+                }
+
                 worldPosition.y = hit.point.y;
             }
-            else
-            {
-                worldPosition.y = 0f; // fallback
-            }
 
-            // Place the tower
             GameObject newTower = Instantiate(towerPrefab, worldPosition, Quaternion.identity);
-
-            // Mark the tile as occupied
             grid.Add(tileCoords, newTower);
-
-            // Subtract the cost from CoinManager
             CoinManager.Instance.SpendCoins(towerCost);
 
-            return true;
+            towerPrefab = null; // Clear selection after placing
         }
     }
-
-
 }
