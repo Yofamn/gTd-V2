@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Soldat Union
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 266686630}
   - component: {fileID: 266686629}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Prince rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Elite Soldat
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Equine Soldat
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1062,8 +1062,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b933e6ec4ea9434ca405bd67d88c4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerButtons: []
-  towerPrefabs: []
+  towerButtons:
+  - {fileID: 1838543512}
+  - {fileID: 1724643107}
+  - {fileID: 266686629}
+  - {fileID: 2017129569}
+  towerPrefabs:
+  - {fileID: 5954837094532530006, guid: 275cb03f56130494986adf1f9f623924, type: 3}
+  - {fileID: 639396978566363287, guid: 44d45e14bed52e2438f6af1304713e68, type: 3}
+  - {fileID: 4015088924154500602, guid: b924656f2f289024a9612c2c31bd6847, type: 3}
+  - {fileID: 3787089747317225702, guid: 3c41707745b94254e9feb70367c89160, type: 3}
 --- !u!4 &1496932883
 Transform:
   m_ObjectHideFlags: 0
@@ -1288,7 +1296,7 @@ GameObject:
   - component: {fileID: 1724643108}
   - component: {fileID: 1724643107}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: equine soldat button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1421,12 +1429,12 @@ GameObject:
   - component: {fileID: 1769021665}
   - component: {fileID: 1769021664}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: flame throwers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1769021663
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1554,7 +1562,7 @@ GameObject:
   - component: {fileID: 1838543513}
   - component: {fileID: 1838543512}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Elite Soldat button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1731,7 +1739,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Prince Rifle
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1821,7 +1829,7 @@ GameObject:
   - component: {fileID: 2017129570}
   - component: {fileID: 2017129569}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: soldat union
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
