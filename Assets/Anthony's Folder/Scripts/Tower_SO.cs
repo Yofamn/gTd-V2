@@ -14,7 +14,7 @@ namespace TowerDefense
         public static int GetCost(GameObject gameObject)
         {
             Tower tower = gameObject.GetComponent<Tower>();
-            if(!tower) return 1000;
+            if(!tower) return 100000;
             return tower.towerType.cost;
         }
     }

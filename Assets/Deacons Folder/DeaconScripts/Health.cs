@@ -1,16 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace TowerDefense{
     public class Health : MonoBehaviour
     {
         CoinManager coinManager;
-        
+        [SerializeField]private Text coinText;
         void Awake()
         {
             coinManager = FindObjectOfType<CoinManager>();
+            //coinText = coinManager.coinToText();
         }
 
         public int currentHealth;
@@ -29,6 +28,7 @@ namespace TowerDefense{
                 if (damageApplied > 0 && coinManager != null && gameObject.CompareTag("Enemy"))
                 {
                     coinManager.AddCoins(damageApplied); // Give coins per damage taken
+                    coinText.text = coinManager.coinToText();
                 }
                 currentHealth -= damage;
 
