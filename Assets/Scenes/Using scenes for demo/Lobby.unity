@@ -4044,6 +4044,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3615181327127093672, guid: 3461c8d14bc13bb4384505ad2b8b974f, type: 3}
   m_PrefabInstance: {fileID: 572544793}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &583982169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3397794668357964319, guid: a5ac041b79f79364ca8481b503332787, type: 3}
+  m_PrefabInstance: {fileID: 1253118887}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &612257066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7627,6 +7632,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3615181327127093672, guid: 3461c8d14bc13bb4384505ad2b8b974f, type: 3}
   m_PrefabInstance: {fileID: 1230574427}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1233210659 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2045900472345635223, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+  m_PrefabInstance: {fileID: 417371514}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ad96fbc1a25dd4f9ea87a312134998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1237923532
 GameObject:
   m_ObjectHideFlags: 0
@@ -8540,6 +8556,8 @@ GameObject:
   - component: {fileID: 1397791204}
   - component: {fileID: 1397791203}
   - component: {fileID: 1397791202}
+  - component: {fileID: 1397791210}
+  - component: {fileID: 1397791209}
   m_Layer: 0
   m_Name: Sparrow
   m_TagString: Untagged
@@ -8696,6 +8714,48 @@ Transform:
   - {fileID: 1951393919}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1397791209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397791201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f6665b0b5b8fe4f9476b6cde2b6899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: Press e to interact
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 583982169}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1397791210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397791201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e0d0f8ab0722f4f82695e29a922bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 2
+  interactableName: {fileID: 0}
 --- !u!1 &1402626127
 GameObject:
   m_ObjectHideFlags: 0
@@ -9273,7 +9333,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3397794668357964319, guid: a5ac041b79f79364ca8481b503332787, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1570335464}
   m_SourcePrefab: {fileID: 100100000, guid: a5ac041b79f79364ca8481b503332787, type: 3}
 --- !u!4 &1472924384 stripped
 Transform:
@@ -9707,6 +9770,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2457980647856762042, guid: 6bb92931db12d8740845da8784562097, type: 3}
   m_PrefabInstance: {fileID: 1549379065}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1570335463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3397794668357964319, guid: a5ac041b79f79364ca8481b503332787, type: 3}
+  m_PrefabInstance: {fileID: 1472924383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1570335464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570335463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f6665b0b5b8fe4f9476b6cde2b6899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: Press e to interact
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1233210659}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: City Scene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1576758007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13871,12 +13967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3812f9deb026e1a41adcf27d22f8ba24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectiveDisplay: {fileID: 0}
-  objectiveText: obj!
-  completedObjective: obj!
-  OnCompleteObjective:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &2058586414
 GameObject:
   m_ObjectHideFlags: 0
