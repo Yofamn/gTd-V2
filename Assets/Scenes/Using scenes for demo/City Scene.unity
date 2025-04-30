@@ -13520,7 +13520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a7815ae9061ab43af37068b4295b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 5954837094532530006, guid: 275cb03f56130494986adf1f9f623924, type: 3}
+  towerPrefab: {fileID: 0}
   buildableLayer:
     serializedVersion: 2
     m_Bits: 256
