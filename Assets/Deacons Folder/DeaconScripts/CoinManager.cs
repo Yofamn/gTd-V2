@@ -41,5 +41,10 @@ using UnityEngine;
         {
             return coins;
         }
+
+        public string coinToText()
+        {
+            return ""+coins;
+        }
     }
 
