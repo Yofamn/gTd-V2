@@ -8,6 +8,10 @@ namespace TowerDefense
     {
         private Dictionary<Vector3Int, GameObject> gameObjects = new Dictionary<Vector3Int, GameObject>();
 
+        void Start()
+        {
+            new Vector3Int(1,0,1);
+        }
         public bool Occupied(Vector3Int tileCoords)
         {
             return gameObjects.ContainsKey(tileCoords);

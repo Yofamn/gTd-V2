@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5670035589317052339}
   - component: {fileID: 536919674561844734}
   - component: {fileID: 2686794461902475030}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Dirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,8 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2508174892546670452}
-  - component: {fileID: 4407770398559995983}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,27 +138,6 @@ Transform:
   - {fileID: 1997947293715774059}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4407770398559995983
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7164496662740645161}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 0.94196045, z: 1}
-  m_Center: {x: 0, y: -0.25969046, z: 0}
 --- !u!1 &8023050271518198938
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +150,7 @@ GameObject:
   - component: {fileID: 4143083104752299720}
   - component: {fileID: 2030962262267683161}
   - component: {fileID: 148265939100293425}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -7,7 +7,7 @@ using UnityEngine;
     {
         public static CoinManager Instance;
 
-        private int coins = 0;
+        [SerializeField] int coins = 0;
 
         private void Awake()
         {

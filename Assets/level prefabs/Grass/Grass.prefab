@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5670035589317052339}
   - component: {fileID: 536919674561844734}
   - component: {fileID: 2686794461902475030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Dirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2508174892546670452}
   - component: {fileID: 9014656744409808830}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,8 +158,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.940079, z: 1}
-  m_Center: {x: 0, y: -0.26503944, z: 0}
+  m_Size: {x: 1, y: 0.93563193, z: 1}
+  m_Center: {x: 0, y: -0.26281592, z: 0}
 --- !u!1 &8023050271518198938
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 4143083104752299720}
   - component: {fileID: 2030962262267683161}
   - component: {fileID: 148265939100293425}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}

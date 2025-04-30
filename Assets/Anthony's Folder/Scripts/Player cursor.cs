@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TowerDefence;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace TowerDefense
 {
@@ -21,7 +22,7 @@ namespace TowerDefense
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && !CompareTag("Path"))
             {
                 Vector3Int tileCoords = MyGrid.WorldToGrid(cursor.transform.position);
                 TryPlaceTower(grid, tileCoords);

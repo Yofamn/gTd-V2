@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TowerDefence;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace TowerDefense{
     public class DeaconsCursor : MonoBehaviour
@@ -9,6 +10,8 @@ namespace TowerDefense{
         public GameObject towerPrefab;
         private MyGrid grid;
         private Cursor cursor;
+
+        [SerializeField] private LayerMask buildableLayer;
 
         private void Awake()
         {
@@ -18,7 +21,7 @@ namespace TowerDefense{
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 Vector3Int tileCoords = MyGrid.WorldToGrid(cursor.transform.position);
                 TryPlaceTower(grid, tileCoords);
@@ -38,8 +41,12 @@ namespace TowerDefense{
             // Raycast down to find ground
             RaycastHit hit;
             Vector3 rayOrigin = new Vector3(worldPosition.x, 50f, worldPosition.z); // start raycast from high up
-            if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 100f))
+            if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 100f, buildableLayer))
             {
+                    if (Vector3.Angle(hit.normal, Vector3.up) > 5f) 
+                    {
+                        return false; // Don't allow placement if the surface is angled
+                    }
                 worldPosition.y = hit.point.y;
             }
             else
