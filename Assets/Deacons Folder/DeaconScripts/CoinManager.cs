@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
     public class CoinManager : MonoBehaviour
     {
         public static CoinManager Instance;
+        [SerializeField] private TextMeshProUGUI coinText;
 
         [SerializeField] int coins = 0;
 
@@ -20,11 +21,13 @@ using UnityEngine;
             {
                 Destroy(gameObject);
             }
+            updateCoinText();
         }
 
         public void AddCoins(int amount)
         {
             coins += amount;
+            updateCoinText();
         }
 
         public bool SpendCoins(int amount)
@@ -32,6 +35,7 @@ using UnityEngine;
             if (coins >= amount)
             {
                 coins -= amount;
+                updateCoinText();
                 return true;
             }
             return false;
@@ -42,9 +46,12 @@ using UnityEngine;
             return coins;
         }
 
-        public string coinToText()
+        public void updateCoinText()
         {
-            return ""+coins;
+            
+            coinText.text = "Coins: " + GetCoins().ToString();
         }
+
+
     }
 

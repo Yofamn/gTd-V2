@@ -8,6 +8,7 @@ namespace TowerDefense
         [Header("Placement Settings")]
         public GameObject towerPrefab;
         [SerializeField] private LayerMask buildableLayer;
+        CoinManager coinManager;
 
         private MyGrid grid;
 
@@ -73,8 +74,17 @@ namespace TowerDefense
             }
 
             GameObject newTower = Instantiate(towerPrefab, worldPosition, Quaternion.identity);
-            grid.Add(tileCoords, newTower);
-            CoinManager.Instance.SpendCoins(towerCost);
+
+            if (newTower != null)
+            {
+                grid.Add(tileCoords, newTower);
+                CoinManager.Instance.SpendCoins(towerCost);
+                towerPrefab = null; // Clear selection after placing
+            }
+            else
+            {
+                Debug.LogWarning("Tower instantiation failed. Coins not spent.");
+            }
 
             towerPrefab = null; // Clear selection after placing
         }

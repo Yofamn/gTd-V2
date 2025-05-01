@@ -1,24 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 namespace TowerDefense{
     public class Health : MonoBehaviour
     {
         CoinManager coinManager;
-        [SerializeField]private Text coinText;
+
         void Awake()
         {
             coinManager = FindObjectOfType<CoinManager>();
-            //coinText = coinManager.coinToText();
         }
 
         public int currentHealth;
-        int totalHealth;
-
-        void Start()
-        {
-            totalHealth  = currentHealth;
-        }
 
         void TakeDamage(int damage)
             {
@@ -28,7 +21,6 @@ namespace TowerDefense{
                 if (damageApplied > 0 && coinManager != null && gameObject.CompareTag("Enemy"))
                 {
                     coinManager.AddCoins(damageApplied); // Give coins per damage taken
-                    coinText.text = coinManager.coinToText();
                 }
                 currentHealth -= damage;
 
@@ -51,7 +43,6 @@ namespace TowerDefense{
                 if (targethealth != null) {targethealth.TakeDamage(damage); }
             }
             public void EnemyDeath(){
-
                 Destroy(gameObject);
                 // death animation or sound
             }

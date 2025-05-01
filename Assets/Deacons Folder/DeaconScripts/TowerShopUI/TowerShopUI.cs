@@ -25,7 +25,7 @@ namespace TowerDefense
 
         if (CoinManager.Instance.GetCoins() >= towerCost)
         {
-            CoinManager.Instance.SpendCoins(towerCost); // Spend coins
+
 
             // Find the DeaconsCursor and set its towerPrefab
             DeaconsCursor deaconsCursor = FindObjectOfType<DeaconsCursor>();
