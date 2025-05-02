@@ -9,6 +9,7 @@ TagManager:
   - Path
   - Buildable
   - Coins
+  - healthText
   layers:
   - Default
   - TransparentFX
