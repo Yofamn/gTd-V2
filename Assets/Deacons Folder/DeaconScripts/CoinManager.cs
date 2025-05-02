@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using TowerDefence;
 
-    public class CoinManager : MonoBehaviour
+public class CoinManager : MonoBehaviour
     {
         public static CoinManager Instance;
-        [SerializeField] private TextMeshProUGUI coinText;
 
-        [SerializeField] int coins = 0;
+
+        [SerializeField] int coins = 100;
 
         private void Awake()
         {
+            
             if (Instance == null)
             {
                 Instance = this;
@@ -21,13 +23,14 @@ using TMPro;
             {
                 Destroy(gameObject);
             }
-            updateCoinText();
+
+            CoinDisplay.Instance?.UpdateCoinText(coins);
         }
 
         public void AddCoins(int amount)
         {
             coins += amount;
-            updateCoinText();
+            CoinDisplay.Instance?.UpdateCoinText(coins);
         }
 
         public bool SpendCoins(int amount)
@@ -35,7 +38,7 @@ using TMPro;
             if (coins >= amount)
             {
                 coins -= amount;
-                updateCoinText();
+                CoinDisplay.Instance?.UpdateCoinText(coins);
                 return true;
             }
             return false;
@@ -45,13 +48,5 @@ using TMPro;
         {
             return coins;
         }
-
-        public void updateCoinText()
-        {
-            
-            coinText.text = "Coins: " + GetCoins().ToString();
-        }
-
-
     }
 

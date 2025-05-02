@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 namespace TowerDefense
 {
@@ -9,6 +10,7 @@ namespace TowerDefense
         public GameObject towerPrefab;
         [SerializeField] private LayerMask buildableLayer;
         CoinManager coinManager;
+        private TextMeshProUGUI coinText;
 
         private MyGrid grid;
 

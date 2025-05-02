@@ -38,7 +38,17 @@ namespace TowerDefense
             // Uncomment after player/health script is in.
             
             Player player = FindObjectOfType<Player>();
-            Health.TryDamage(player.gameObject, health.getHealth());
+            if (player != null)
+            {
+                // Get this enemy's Health component
+                Health enemyHealth = GetComponent<Health>();
+                if (enemyHealth != null)
+                {
+                    int damage = enemyHealth.getHealth();
+                    Health.TryDamage(player.gameObject, damage);
+                }
+            }
+
             Destroy(gameObject);
 
             //Delete Later

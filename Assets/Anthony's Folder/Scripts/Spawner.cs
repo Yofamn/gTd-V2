@@ -11,7 +11,7 @@ public class Spawner : MonoBehaviour
     public bool spawn = false;
     public GameObject[] WaveOne;
     public GameObject[] WaveTwo;
-    public float spawnRate = 1f;
+    public float spawnRate = .5f;
     int currentEnemy;
     int waveCounter;
     GameObject button;
