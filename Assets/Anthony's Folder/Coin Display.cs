@@ -1,0 +1,64 @@
+using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+
+namespace TowerDefence
+{
+public class CoinDisplay : MonoBehaviour
+{
+    public static CoinDisplay Instance;
+    [SerializeField] private TextMeshProUGUI coinText;
+    [SerializeField] private List<string> hiddenInScenes = new List<string> {};
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject); // Keep this object across scenes
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+        else
+        {
+            Destroy(this.gameObject); // Destroy duplicate instances
+        }
+
+        if (coinText == null)
+        {
+            coinText = GetComponent<TextMeshProUGUI>();
+        }
+    }
+
+            private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            ReassignCoinText();
+
+            // Optional: Immediately update UI with current coin value
+            if (CoinManager.Instance != null)
+            {
+                UpdateCoinText(CoinManager.Instance.GetCoins());
+            }
+        }
+
+        private void ReassignCoinText()
+        {
+            if (coinText == null)
+            {
+                coinText = GameObject.FindWithTag("Coins")?.GetComponent<TextMeshProUGUI>();
+                if (coinText == null)
+                {
+                    Debug.LogWarning("CoinDisplay: Could not find TextMeshProUGUI with tag 'Coins' in the scene.");
+                }
+            }
+        }
+
+    public void UpdateCoinText(int coins)
+    {
+        if (coinText != null)
+        {
+            coinText.text = "Coins: " + coins.ToString();
+        }
+    }
+}
+
+}

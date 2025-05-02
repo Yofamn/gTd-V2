@@ -8,6 +8,7 @@ TagManager:
   - yes
   - Path
   - Buildable
+  - Coins
   layers:
   - Default
   - TransparentFX
