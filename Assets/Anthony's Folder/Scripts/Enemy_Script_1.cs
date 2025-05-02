@@ -31,28 +31,33 @@ namespace TowerDefense
                 transform.position = Vector3.MoveTowards(start, target, maxDist);
                 transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(target - start), 0.05f);
 
-                if(transform.position == target) index++;
+                if (Vector3.Distance(transform.position, target) < 0.1f)
+                {
+                    index++;
+                }
                 yield return null;
             }
             
             // Uncomment after player/health script is in.
-            
-            Player player = FindObjectOfType<Player>();
+            Debug.Log("Before player dmg");
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            Debug.Log(player + " player obj");
             if (player != null)
             {
                 // Get this enemy's Health component
+                Debug.Log("Insdie player");
                 Health enemyHealth = GetComponent<Health>();
-                if (enemyHealth != null)
+                Health playerHealth = GetComponent<Health>();
+                if (enemyHealth != null && playerHealth != null)
                 {
                     int damage = enemyHealth.getHealth();
-                    Health.TryDamage(player.gameObject, damage);
+                    Health.TryDamage(player, damage);
+                    Debug.Log("Damage: "+enemyHealth.getHealth());
                 }
             }
 
             Destroy(gameObject);
 
-            //Delete Later
-            //Destroy(gameObject);
         }
     }
 }
