@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3eea5a7f6912b141adb90a273b69e00, type: 3}
   m_Name: Lancer
   m_EditorClassIdentifier: 
-  Speed: 20
+  Speed: 5

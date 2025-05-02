@@ -24,13 +24,13 @@ public class CoinManager : MonoBehaviour
                 Destroy(gameObject);
             }
 
-            CoinDisplay.Instance?.UpdateCoinText(coins);
+            PlayerDisplay.Instance?.UpdateCoinText(coins);
         }
 
         public void AddCoins(int amount)
         {
             coins += amount;
-            CoinDisplay.Instance?.UpdateCoinText(coins);
+            PlayerDisplay.Instance?.UpdateCoinText(coins);
         }
 
         public bool SpendCoins(int amount)
@@ -38,7 +38,7 @@ public class CoinManager : MonoBehaviour
             if (coins >= amount)
             {
                 coins -= amount;
-                CoinDisplay.Instance?.UpdateCoinText(coins);
+                PlayerDisplay.Instance?.UpdateCoinText(coins);
                 return true;
             }
             return false;
