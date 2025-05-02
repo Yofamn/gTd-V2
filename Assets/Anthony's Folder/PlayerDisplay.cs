@@ -5,10 +5,11 @@ using System.Collections.Generic;
 
 namespace TowerDefence
 {
-public class CoinDisplay : MonoBehaviour
+public class PlayerDisplay : MonoBehaviour
 {
-    public static CoinDisplay Instance;
+    public static PlayerDisplay Instance;
     [SerializeField] private TextMeshProUGUI coinText;
+    [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private List<string> hiddenInScenes = new List<string> {};
     private void Awake()
     {
@@ -27,6 +28,10 @@ public class CoinDisplay : MonoBehaviour
         {
             coinText = GetComponent<TextMeshProUGUI>();
         }
+        if (healthText == null)
+        {
+            healthText = GetComponent<TextMeshProUGUI>();
+        }
     }
 
             private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -41,6 +46,17 @@ public class CoinDisplay : MonoBehaviour
         }
 
         private void ReassignCoinText()
+        {
+            if (healthText == null)
+            {
+                healthText = GameObject.FindWithTag("healthText")?.GetComponent<TextMeshProUGUI>();
+                if (healthText == null)
+                {
+                    Debug.LogWarning("healthText: Could not find TextMeshProUGUI with tag 'Coins' in the scene.");
+                }
+            }
+        }
+        private void ReassignHealthText()
         {
             if (coinText == null)
             {
