@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.012217715, g: 0.009083728, b: 0.009041926, a: 1}
+  m_IndirectSpecularColor: {r: 0.012217704, g: 0.009083724, b: 0.009041921, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16959,6 +16959,10 @@ PrefabInstance:
       propertyPath: coinText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 880216088224706158, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2018773063455361509, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
       propertyPath: gold
       value: 300
@@ -17042,6 +17046,10 @@ PrefabInstance:
     - target: {fileID: 8713975823234950178, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713975823234950178, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8713975823234950178, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
       propertyPath: m_TagString
@@ -28095,7 +28103,7 @@ GameObject:
   - component: {fileID: 1555764606}
   m_Layer: 0
   m_Name: Sphere (33)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38527,6 +38535,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6139292076151655640, guid: 9322e25849ac9be47a9fcd85c9afecaf, type: 3}
+      propertyPath: WaveOne.Array.data[0]
+      value: 
+      objectReference: {fileID: 4295237717417342421, guid: 357fc6fe73096c543aee7e0f26137830, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
