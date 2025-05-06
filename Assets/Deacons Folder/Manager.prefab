@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 4557982708228518863}
   - component: {fileID: 2045900472345635223}
   - component: {fileID: 5176682543987456805}
+  - component: {fileID: 4425462358646520582}
+  - component: {fileID: -7223901240489155916}
+  - component: {fileID: 6224069336555700360}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -28,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2524094571127014122}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.45066, y: 137.74068, z: -135.29622}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,7 +49,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf3fc0cbd3a6a1d49b6d3c4b59285c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinText: {fileID: 0}
   coins: 100
 --- !u!114 &2045900472345635223
 MonoBehaviour:
@@ -73,3 +75,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 0}
+  healthText: {fileID: 0}
+  hiddenInScenes: []
+--- !u!114 &4425462358646520582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524094571127014122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78245689a23e4f74e925a72d6ada2411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  coinIncomeMultiplier: 1
+--- !u!114 &-7223901240489155916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524094571127014122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a3f296126648b4c81c7408c24df415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6224069336555700360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524094571127014122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f642e1ec9712104184f0dfec50f71f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerButtons: []
