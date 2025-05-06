@@ -8,7 +8,7 @@ public class CoinManager : MonoBehaviour
     {
         public static CoinManager Instance;
 
-
+        float multiplier = PlayerStats.Instance?.coinIncomeMultiplier ?? 1f;
         [SerializeField] int coins = 100;
 
         private void Awake()
@@ -29,7 +29,7 @@ public class CoinManager : MonoBehaviour
 
         public void AddCoins(int amount)
         {
-            coins += amount;
+            coins += (int)(amount * multiplier);
             PlayerDisplay.Instance?.UpdateCoinText(coins);
         }
 
