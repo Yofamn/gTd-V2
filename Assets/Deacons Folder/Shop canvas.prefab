@@ -1790,10 +1790,11 @@ MonoBehaviour:
   CategoryUIPrefab: {fileID: 347196853566570171, guid: 2b9512c0159eb09499b1f17aa0bf2139, type: 3}
   ItemUIPrefab: {fileID: 6788833959015476022, guid: f1b81d7bf9b80f64d8fc96d7d6bb840b, type: 3}
   AvailableItems:
-  - {fileID: 11400000, guid: 604e48ab43f93a944976e740e094d6b1, type: 2}
-  - {fileID: 11400000, guid: ff746f7506b39ad4cb9b17e108322661, type: 2}
-  - {fileID: 11400000, guid: 097b189fcd1fa63409d1c234797e5ad1, type: 2}
-  - {fileID: 11400000, guid: b774eb5e45e7cca408ad6409bac138f2, type: 2}
+  - {fileID: 11400000, guid: 7aad8471997c71e42b77ec8816f24708, type: 2}
+  - {fileID: 11400000, guid: 6446b9648163f8b49828eed36ad4e8bb, type: 2}
+  - {fileID: 11400000, guid: 999ccf1ba4a84bf40999519f662fd2f3, type: 2}
+  - {fileID: 11400000, guid: 96eee9894cba7b24c8b9265b40130adc, type: 2}
+  - {fileID: 11400000, guid: f01fdf93bde8bc240bb061e30a36c669, type: 2}
 --- !u!1 &6269888724856978711
 GameObject:
   m_ObjectHideFlags: 0

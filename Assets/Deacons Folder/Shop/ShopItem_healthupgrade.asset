@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fefa2b1999be3644ac30344c6c37a37, type: 3}
-  m_Name: ShopItem_Health
+  m_Name: ShopItem_healthupgrade
   m_EditorClassIdentifier: 
   Category: {fileID: 11400000, guid: 2edb26bea6ea0cf46bd7f7a0db366db2, type: 2}
-  Name: Health upgrade
-  Description: Increases health by 10%
-  price: 2
+  Name: Health Increase
+  Description: Increases health by 50
+  price: 0
+  ItemType: 1
+  TowerPrefabToUnlock: {fileID: 0}
+  HealthIncreaseAmount: 50
+  CoinIncomeMultiplier: 1
