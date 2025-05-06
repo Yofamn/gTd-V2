@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fefa2b1999be3644ac30344c6c37a37, type: 3}
-  m_Name: ShopItem_ 2
+  m_Name: ShopItem_SoldatEquine
   m_EditorClassIdentifier: 
-  Category: {fileID: 0}
+  Category: {fileID: 11400000, guid: d86159e4164bc4443ad6a5e23aeee33f, type: 2}
   Name: 
   Description: 
-  price: 0
+  price: 60
+  ItemType: 0
+  TowerPrefabToUnlock: {fileID: 639396978566363287, guid: 44d45e14bed52e2438f6af1304713e68, type: 3}
+  HealthIncreaseAmount: 0
+  CoinIncomeMultiplier: 0

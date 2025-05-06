@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fefa2b1999be3644ac30344c6c37a37, type: 3}
-  m_Name: ShopItem_gun1
+  m_Script: {fileID: 11500000, guid: 5c92d5c81f8a07d419d18f08f4410eb5, type: 3}
+  m_Name: ShopCategory_TowerUnlock
   m_EditorClassIdentifier: 
-  Category: {fileID: 11400000, guid: 49287e9feba8337468d29680fce54416, type: 2}
-  Name: Gun 1
-  Description: gun
-  price: 5
+  Name: Towers

@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fefa2b1999be3644ac30344c6c37a37, type: 3}
-  m_Name: ShopItem_Apple
+  m_Name: ShopItem_PrinceRifle
   m_EditorClassIdentifier: 
-  Category: {fileID: 11400000, guid: 683a861509589954684fed76cf509d95, type: 2}
-  Name: Apple
-  Description: apple
-  price: 2
+  Category: {fileID: 11400000, guid: d86159e4164bc4443ad6a5e23aeee33f, type: 2}
+  Name: Prince Rifle
+  Description: 
+  price: 80
+  ItemType: 0
+  TowerPrefabToUnlock: {fileID: 4015088924154500602, guid: b924656f2f289024a9612c2c31bd6847, type: 3}
+  HealthIncreaseAmount: 0
+  CoinIncomeMultiplier: 0

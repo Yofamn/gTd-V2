@@ -6,6 +6,8 @@ using TMPro;
 using UnityEngine.UI;
 public class ShopUI_Item : MonoBehaviour
 {
+
+    
     [SerializeField] TextMeshProUGUI ItemName;
     [SerializeField] TextMeshProUGUI Description;
     [SerializeField] TextMeshProUGUI Price;

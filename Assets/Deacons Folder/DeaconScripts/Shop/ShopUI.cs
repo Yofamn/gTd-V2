@@ -10,6 +10,7 @@ public class ShopUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI AvailableFunds;
     [SerializeField] Transform CategoryUIRoot;
     [SerializeField] Transform ItemUIRoot;
+    public TowerButtonController buttonController;
     [SerializeField] Button PurchaseButton;
     [SerializeField] GameObject CategoryUIPrefab;
     [SerializeField] GameObject ItemUIPrefab;
@@ -24,6 +25,7 @@ public class ShopUI : MonoBehaviour
     void Start(){
         //Begin testing code
         CurrentPurchaser = FindObjectOfType<Purchaser>();
+        buttonController = FindObjectOfType<TowerButtonController>();
         //end testing code
         RefreshShopUI_Common();
         RefreshShopUI_Categories();
@@ -126,7 +128,21 @@ public class ShopUI : MonoBehaviour
     }
     public void OnClickedPurchase(){
         CurrentPurchaser.SpendFunds(SelectedItem.price);
+        switch (SelectedItem.ItemType){
+            case ShopItems.ShopItemType.TowerUnlock: 
+                TowerUnlockManager.Instance.UnlockTower(SelectedItem.TowerPrefabToUnlock);
+                buttonController.RefreshButtons();
+                break;
+            case ShopItems.ShopItemType.HealthUpgrade:
+                PlayerStats.Instance.IncreaseMaxHealth(SelectedItem.HealthIncreaseAmount);
+                break;
+            case ShopItems.ShopItemType.CoinIncomeBoost:
+                PlayerStats.Instance.MultiplyCoinIncome(SelectedItem.CoinIncomeMultiplier);
+                break;
+        }
         RefreshShopUI_Common();
+
+
     }
     public void OnClickedExit(){
 
