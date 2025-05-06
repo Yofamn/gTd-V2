@@ -126,7 +126,19 @@ public class ShopUI : MonoBehaviour
     }
     public void OnClickedPurchase(){
         CurrentPurchaser.SpendFunds(SelectedItem.price);
+        switch (SelectedItem.ItemType){
+            case ShopItems.ShopItemType.TowerUnlock: 
+                TowerUnlockManager.Instance.UnlockTower(SelectedItem.TowerPrefabToUnlock);
+                break;
+            case ShopItems.ShopItemType.HealthUpgrade:
+                PlayerStats.Instance.IncreaseMaxHealth(SelectedItem.HealthIncreaseAmount);
+                break;
+            case ShopItems.ShopItemType.CoinIncomeBoost:
+                PlayerStats.Instance.MultiplyCoinIncome(SelectedItem.CoinIncomeMultiplier);
+        }
         RefreshShopUI_Common();
+
+
     }
     public void OnClickedExit(){
 

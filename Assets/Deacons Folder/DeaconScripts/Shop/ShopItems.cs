@@ -9,5 +9,10 @@ public class ShopItems : ScriptableObject
     public string Name;
     [TextArea(3,5)]public string Description;
     public int price;
+    public enum ShopItemType{TowerUnlock, HealthUpgrade, CoinIncomeBoost}
+    public ShopItemType ItemType;
+    public GameObject TowerPrefabToUnlock;
+    public int HealthIncreaseAmount;
+    public float CoinIncomeMultiplier;
 
 }
