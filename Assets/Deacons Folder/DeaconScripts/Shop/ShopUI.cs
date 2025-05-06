@@ -135,6 +135,7 @@ public class ShopUI : MonoBehaviour
                 break;
             case ShopItems.ShopItemType.CoinIncomeBoost:
                 PlayerStats.Instance.MultiplyCoinIncome(SelectedItem.CoinIncomeMultiplier);
+                break;
         }
         RefreshShopUI_Common();
 
