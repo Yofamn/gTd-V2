@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.012217704, g: 0.009083724, b: 0.009041921, a: 1}
+  m_IndirectSpecularColor: {r: 0.012217699, g: 0.009083719, b: 0.009041917, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7734,15 +7734,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1190948804263364927, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.45066
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1190948804263364927, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 137.74068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1190948804263364927, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -135.29622
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1190948804263364927, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7784,6 +7784,42 @@ PrefabInstance:
       propertyPath: coinText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+      propertyPath: towerButtons.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+      propertyPath: towerButtons.Array.data[0].button
+      value: 
+      objectReference: {fileID: 1894075579}
+    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+      propertyPath: towerButtons.Array.data[1].button
+      value: 
+      objectReference: {fileID: 1894075578}
+    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+      propertyPath: towerButtons.Array.data[2].button
+      value: 
+      objectReference: {fileID: 1894075577}
+    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+      propertyPath: towerButtons.Array.data[3].button
+      value: 
+      objectReference: {fileID: 1894075576}
+    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+      propertyPath: towerButtons.Array.data[0].towerPrefab
+      value: 
+      objectReference: {fileID: 5954837094532530006, guid: 275cb03f56130494986adf1f9f623924, type: 3}
+    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+      propertyPath: towerButtons.Array.data[1].towerPrefab
+      value: 
+      objectReference: {fileID: 639396978566363287, guid: 44d45e14bed52e2438f6af1304713e68, type: 3}
+    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+      propertyPath: towerButtons.Array.data[2].towerPrefab
+      value: 
+      objectReference: {fileID: 4015088924154500602, guid: b924656f2f289024a9612c2c31bd6847, type: 3}
+    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+      propertyPath: towerButtons.Array.data[3].towerPrefab
+      value: 
+      objectReference: {fileID: 3787089747317225702, guid: 3c41707745b94254e9feb70367c89160, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
