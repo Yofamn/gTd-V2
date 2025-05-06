@@ -37,5 +37,7 @@ namespace TowerDefence
             characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
         }
 
+        
+
    }
 }
