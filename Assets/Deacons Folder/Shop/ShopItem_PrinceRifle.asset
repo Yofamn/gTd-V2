@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Category: {fileID: 11400000, guid: d86159e4164bc4443ad6a5e23aeee33f, type: 2}
   Name: Prince Rifle
-  Description: 
+  Description: Moderate damage but he has farther range
   price: 300
   ItemType: 0
   TowerPrefabToUnlock: {fileID: 4015088924154500602, guid: b924656f2f289024a9612c2c31bd6847, type: 3}
