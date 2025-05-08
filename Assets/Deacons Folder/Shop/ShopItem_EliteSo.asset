@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Category: {fileID: 11400000, guid: d86159e4164bc4443ad6a5e23aeee33f, type: 2}
   Name: Elite Soldat
-  Description: 
+  Description: Smg with high firerate and direct upgrade from soldat union
   price: 800
   ItemType: 0
   TowerPrefabToUnlock: {fileID: 5954837094532530006, guid: 275cb03f56130494986adf1f9f623924, type: 3}
