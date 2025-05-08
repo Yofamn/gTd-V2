@@ -7,46 +7,37 @@ namespace TowerDefense
     public class TowerShopUI : MonoBehaviour
     {
         [SerializeField] private List<Button> towerButtons;
-        [SerializeField] private List<GameObject> towerPrefabs; // Prefabs that already have Tower script attached
+        [SerializeField] private List<GameObject> towerPrefabs;
 
         private void Start()
         {
             for (int i = 0; i < towerButtons.Count; i++)
             {
                 int index = i;
-                towerButtons[i].onClick.AddListener(() => AttemptToBuyTower(index));
+                towerButtons[i].onClick.AddListener(() => OnTowerButtonClicked(index));
             }
         }
 
-        private void AttemptToBuyTower(int index)
-    {
-        GameObject towerPrefab = towerPrefabs[index];
-        int towerCost = Tower_SO.GetCost(towerPrefab);
-
-        if (PlayerNumManager.Instance.GetCoins() >= towerCost)
+        private void OnTowerButtonClicked(int index)
         {
+            GameObject selectedPrefab = towerPrefabs[index];
+            int cost = Tower_SO.GetCost(selectedPrefab);
 
-
-            // Find the DeaconsCursor and set its towerPrefab
-            DeaconsCursor deaconsCursor = FindObjectOfType<DeaconsCursor>();
-            if (deaconsCursor != null)
+            if (PlayerNumManager.Instance.GetCoins() < cost)
             {
-                // If towerPrefab is already set to this tower, do nothing to avoid resetting it
-                if (deaconsCursor.towerPrefab != towerPrefab)
-                {
-                    deaconsCursor.towerPrefab = towerPrefab;  // Set the selected tower
-                }
+                Debug.Log("Not enough coins to select this tower.");
+                return;
             }
 
-            // Optionally update UI to show the currently selected tower
-            // You can add any logic here to show the selected tower in the UI, like a preview or highlighting it
-        }
-        else
-        {
-            Debug.Log("Not enough gold!");
-        }
-    }
+            // Select tower in TowerButtonController
+            TowerButtonController.Instance.UpdateSelection(towerButtons[index], selectedPrefab);
 
-
+            // Set selected prefab in DeaconsCursor
+            DeaconsCursor cursor = FindObjectOfType<DeaconsCursor>();
+            if (cursor != null)
+            {
+                cursor.selectedTower = selectedPrefab;
+            }
+        }
     }
 }

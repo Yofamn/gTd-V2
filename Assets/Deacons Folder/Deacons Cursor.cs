@@ -1,16 +1,14 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using JetBrains.Annotations;
 
 namespace TowerDefense
 {
     public class DeaconsCursor : MonoBehaviour
     {
         [Header("Placement Settings")]
-        public GameObject towerPrefab;
         [SerializeField] private LayerMask buildableLayer;
-        PlayerNumManager playerNumManager;
-        private TextMeshProUGUI coinText;
 
         private MyGrid grid;
 
@@ -20,17 +18,19 @@ namespace TowerDefense
             if (grid == null)
                 Debug.LogError("No MyGrid found in scene!");
         }
-
+        public GameObject selectedTower = TowerButtonController.Instance?.SelectedTowerPrefab;
         private void Update()
         {
+            // Use TowerButtonController to get the selected tower prefab
+            
+            if (selectedTower == null) return;
+
             Vector3Int tileCoords = GetTargetTile();
             transform.position = MyGrid.GridToWorld(tileCoords);
 
-            if (towerPrefab == null) return;
-
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
-                TryPlaceTower(tileCoords);
+                TryPlaceTower(tileCoords, selectedTower);
             }
         }
 
@@ -44,7 +44,7 @@ namespace TowerDefense
             return Vector3Int.zero;
         }
 
-        private void TryPlaceTower(Vector3Int tileCoords)
+        private void TryPlaceTower(Vector3Int tileCoords, GameObject towerPrefab)
         {
             int towerCost = Tower_SO.GetCost(towerPrefab);
 
@@ -81,14 +81,12 @@ namespace TowerDefense
             {
                 grid.Add(tileCoords, newTower);
                 PlayerNumManager.Instance.SpendCoins(towerCost);
-                towerPrefab = null; // Clear selection after placing
+                TowerButtonController.Instance.ClearSelection(); // Unselect after placing
             }
             else
             {
                 Debug.LogWarning("Tower instantiation failed. Coins not spent.");
             }
-
-            towerPrefab = null; // Clear selection after placing
         }
     }
 }
