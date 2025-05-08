@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 0.75
   damage: 5
-  cost: 1
+  cost: 100

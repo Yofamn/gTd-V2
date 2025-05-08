@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fefa2b1999be3644ac30344c6c37a37, type: 3}
-  m_Name: ShopItem_SoldatUnion
+  m_Name: ShopItem_EliteSo
   m_EditorClassIdentifier: 
   Category: {fileID: 11400000, guid: d86159e4164bc4443ad6a5e23aeee33f, type: 2}
-  Name: Soldat Union
-  Description: 
-  price: 120
+  Name: Elite Soldat
+  Description: Smg with high firerate and direct upgrade from soldat union
+  price: 800
   ItemType: 0
-  TowerPrefabToUnlock: {fileID: 3787089747317225702, guid: 3c41707745b94254e9feb70367c89160, type: 3}
+  TowerPrefabToUnlock: {fileID: 5954837094532530006, guid: 275cb03f56130494986adf1f9f623924, type: 3}
   HealthIncreaseAmount: 0
   CoinIncomeMultiplier: 0
