@@ -12,6 +12,7 @@ TagManager:
   - Text
   - healthText
   - BossHealth
+  - Dreadnought
   layers:
   - Default
   - TransparentFX
