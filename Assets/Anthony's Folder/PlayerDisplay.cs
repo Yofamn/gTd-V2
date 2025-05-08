@@ -10,6 +10,7 @@ public class PlayerDisplay : MonoBehaviour
     public static PlayerDisplay Instance;
     [SerializeField] private TextMeshProUGUI coinText;
     [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] private TextMeshProUGUI dreadText;
     [SerializeField] private List<string> hiddenInScenes = new List<string> {"Title"};
     private void Awake()
     {
@@ -57,6 +58,19 @@ public class PlayerDisplay : MonoBehaviour
                 }
             }
         }
+
+        private void ReassignDreadText()
+        {
+            if (dreadText == null)
+            {
+                dreadText = GameObject.FindWithTag("BossHealth")?.GetComponent<TextMeshProUGUI>();
+                if (dreadText == null)
+                {
+                    Debug.LogWarning("healthText: Could not find TextMeshProUGUI with tag 'healthText' in the scene.");
+                }
+            }
+        }
+
         private void ReassignCoinText()
         {
             if (coinText == null)
@@ -81,6 +95,14 @@ public class PlayerDisplay : MonoBehaviour
         if (healthText != null)
         {
             healthText.text = "Health: " + health.ToString();
+        }
+    }
+
+    public void UpdateDreadHealthText(int health)
+    {
+        if (dreadText != null)
+        {
+            dreadText.text = "Dreadnought: " + health.ToString();
         }
     }
 }

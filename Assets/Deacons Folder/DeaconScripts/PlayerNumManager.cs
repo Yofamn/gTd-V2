@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using TowerDefence;
-using TowerDefense;
 
 public class PlayerNumManager : MonoBehaviour
     {
