@@ -8143,18 +8143,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 4557982708228518863, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
-      propertyPath: coins
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4557982708228518863, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
-      propertyPath: health
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4557982708228518863, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
-      propertyPath: coinText
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5176682543987456805, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
       propertyPath: coinText
       value: 
@@ -8163,10 +8151,6 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1608952786}
-    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
-      propertyPath: towerButtons.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
       propertyPath: towerButtons.Array.data[0].button
       value: 
@@ -8179,26 +8163,6 @@ PrefabInstance:
       propertyPath: towerButtons.Array.data[2].button
       value: 
       objectReference: {fileID: 1894075576}
-    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
-      propertyPath: towerButtons.Array.data[3].button
-      value: 
-      objectReference: {fileID: 1894075576}
-    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
-      propertyPath: towerButtons.Array.data[0].towerPrefab
-      value: 
-      objectReference: {fileID: 639396978566363287, guid: 44d45e14bed52e2438f6af1304713e68, type: 3}
-    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
-      propertyPath: towerButtons.Array.data[1].towerPrefab
-      value: 
-      objectReference: {fileID: 4015088924154500602, guid: b924656f2f289024a9612c2c31bd6847, type: 3}
-    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
-      propertyPath: towerButtons.Array.data[2].towerPrefab
-      value: 
-      objectReference: {fileID: 3787089747317225702, guid: 3c41707745b94254e9feb70367c89160, type: 3}
-    - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
-      propertyPath: towerButtons.Array.data[3].towerPrefab
-      value: 
-      objectReference: {fileID: 3787089747317225702, guid: 3c41707745b94254e9feb70367c89160, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -55,7 +55,7 @@ namespace TowerDefense
                     Debug.Log("Damage: "+enemyHealth.getHealth());
                 }
             }
-
+            
             Destroy(gameObject);
 
         }

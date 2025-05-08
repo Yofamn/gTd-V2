@@ -10,7 +10,7 @@ public class PlayerDisplay : MonoBehaviour
     public static PlayerDisplay Instance;
     [SerializeField] private TextMeshProUGUI coinText;
     [SerializeField] private TextMeshProUGUI healthText;
-    [SerializeField] private List<string> hiddenInScenes = new List<string> {};
+    [SerializeField] private List<string> hiddenInScenes = new List<string> {"Title"};
     private void Awake()
     {
         if (Instance == null)
@@ -37,30 +37,31 @@ public class PlayerDisplay : MonoBehaviour
             private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             ReassignCoinText();
-
+            ReassignHealthText();
             // Optional: Immediately update UI with current coin value
             if (PlayerNumManager.Instance != null)
             {
                 UpdateCoinText(PlayerNumManager.Instance.GetCoins());
+                UpdateHealthText(PlayerNumManager.Instance.getHealth());
             }
         }
 
-        private void ReassignCoinText()
+        private void ReassignHealthText()
         {
             if (healthText == null)
             {
                 healthText = GameObject.FindWithTag("healthText")?.GetComponent<TextMeshProUGUI>();
                 if (healthText == null)
                 {
-                    Debug.LogWarning("healthText: Could not find TextMeshProUGUI with tag 'Coins' in the scene.");
+                    Debug.LogWarning("healthText: Could not find TextMeshProUGUI with tag 'healthText' in the scene.");
                 }
             }
         }
-        private void ReassignHealthText()
+        private void ReassignCoinText()
         {
             if (coinText == null)
             {
-                coinText = GameObject.FindWithTag("healthText")?.GetComponent<TextMeshProUGUI>();
+                coinText = GameObject.FindWithTag("Coins")?.GetComponent<TextMeshProUGUI>();
                 if (coinText == null)
                 {
                     Debug.LogWarning("CoinDisplay: Could not find TextMeshProUGUI with tag 'Coins' in the scene.");
