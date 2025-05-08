@@ -1,13 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Xml.Serialization;
-using TowerDefense;
-using Unity.PlasticSCM.Editor.WebApi;
-using Unity.VisualScripting;
+using TMPro;
+using TowerDefence;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    public static PlayerNumManager Instance;
+    
     public bool spawn = false;
     public GameObject[] WaveOne;
     public GameObject[] WaveTwo;
@@ -20,6 +19,7 @@ public class Spawner : MonoBehaviour
     int currentEnemy;
     int waveCounter;
     GameObject button;
+    private TextMeshProUGUI dreadHealthText;
 
     void Start()
     {
@@ -136,6 +136,11 @@ public class Spawner : MonoBehaviour
                 spawn = false;
                 //buttonAppear();
                 if (waveCounter >= 6)
+                {
+                    GameObject dreadHealth = GameObject.FindGameObjectWithTag("BossHealth");
+                    dreadHealth.SetActive(true);
+                    PlayerDisplay.Instance.UpdateDreadHealthText(5000);
+                }
                 yield break;
             }
             Instantiate(WaveSeven[currentEnemy], transform.position, transform.rotation);
@@ -184,7 +189,6 @@ public class Spawner : MonoBehaviour
         else if(waveCounter == 6)
         {
             StartCoroutine(SpawnWave7());
-            waveCounter++;
         }
         //Invoke("buttonAppear", 10);
     }

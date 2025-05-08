@@ -7,7 +7,7 @@ namespace TowerDefense{
     public class Health : MonoBehaviour
     {
         PlayerNumManager playerNumManager;
-
+        
         [SerializeField]int currentHealth;
         void Awake()
         {
@@ -32,6 +32,11 @@ namespace TowerDefense{
                     if (gameObject.CompareTag("Player") && PlayerDisplay.Instance != null)
                     {
                         PlayerDisplay.Instance.UpdateHealthText(currentHealth);
+                    }
+
+                    if (gameObject.CompareTag("Dreadnought") && PlayerDisplay.Instance != null)
+                    {
+                        PlayerDisplay.Instance.UpdateDreadHealthText(currentHealth);
                     }
                 
                 if(currentHealth <= 0)
