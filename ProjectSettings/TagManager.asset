@@ -10,6 +10,8 @@ TagManager:
   - Buildable
   - Coins
   - Text
+  - healthText
+  - BossHealth
   layers:
   - Default
   - TransparentFX
