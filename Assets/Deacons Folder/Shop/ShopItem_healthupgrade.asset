@@ -15,7 +15,7 @@ MonoBehaviour:
   Category: {fileID: 11400000, guid: 2edb26bea6ea0cf46bd7f7a0db366db2, type: 2}
   Name: Health Increase
   Description: Increases health by 50
-  price: 0
+  price: 250
   ItemType: 1
   TowerPrefabToUnlock: {fileID: 0}
   HealthIncreaseAmount: 50
