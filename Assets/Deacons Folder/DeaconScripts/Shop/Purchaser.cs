@@ -14,15 +14,15 @@ public class Purchaser : MonoBehaviour, IPurchaser
 
     public float GetCurrentFunds()
     {
-        return CoinManager.Instance.GetCoins();
+        return PlayerNumManager.Instance.GetCoins();
     }
 
     public bool SpendFunds(int amount)
     {
-        return CoinManager.Instance.SpendCoins(amount);
+        return PlayerNumManager.Instance.SpendCoins(amount);
     }
     public void AddFunds(int amount){
-        CoinManager.Instance.AddCoins(amount);
+        PlayerNumManager.Instance.AddCoins(amount);
     }
 
     // Start is called before the first frame update

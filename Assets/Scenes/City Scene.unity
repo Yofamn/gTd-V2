@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.012217699, g: 0.009083719, b: 0.009041917, a: 1}
+  m_IndirectSpecularColor: {r: 0.012217715, g: 0.009083728, b: 0.009041926, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8148,9 +8148,21 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4557982708228518863, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+      propertyPath: health
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557982708228518863, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
       propertyPath: coinText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5176682543987456805, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 1782555371}
+    - target: {fileID: 5176682543987456805, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 1608952786}
     - target: {fileID: 6224069336555700360, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
       propertyPath: towerButtons.Array.size
       value: 3
@@ -29696,6 +29708,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604673584}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1608952786 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8581955715483102181, guid: c0e55e96f00742c478accfc2dd86fc96, type: 3}
+  m_PrefabInstance: {fileID: 873767485665435015}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1614576269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33087,6 +33110,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2508174892546670452, guid: ccd9a126ce31b3f428cd4f61fca47e30, type: 3}
   m_PrefabInstance: {fileID: 1781070433}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1782555371 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2114967298546828929, guid: fb550a3dda6c5fe4993d0799c5b1e4aa, type: 3}
+  m_PrefabInstance: {fileID: 628672041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1785481802
 PrefabInstance:
   m_ObjectHideFlags: 0

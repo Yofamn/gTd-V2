@@ -39,9 +39,9 @@ public class PlayerDisplay : MonoBehaviour
             ReassignCoinText();
 
             // Optional: Immediately update UI with current coin value
-            if (CoinManager.Instance != null)
+            if (PlayerNumManager.Instance != null)
             {
-                UpdateCoinText(CoinManager.Instance.GetCoins());
+                UpdateCoinText(PlayerNumManager.Instance.GetCoins());
             }
         }
 
@@ -60,7 +60,7 @@ public class PlayerDisplay : MonoBehaviour
         {
             if (coinText == null)
             {
-                coinText = GameObject.FindWithTag("Coins")?.GetComponent<TextMeshProUGUI>();
+                coinText = GameObject.FindWithTag("healthText")?.GetComponent<TextMeshProUGUI>();
                 if (coinText == null)
                 {
                     Debug.LogWarning("CoinDisplay: Could not find TextMeshProUGUI with tag 'Coins' in the scene.");
@@ -73,6 +73,13 @@ public class PlayerDisplay : MonoBehaviour
         if (coinText != null)
         {
             coinText.text = "Coins: " + coins.ToString();
+        }
+    }
+    public void UpdateHealthText(int health)
+    {
+        if (healthText != null)
+        {
+            healthText.text = "Health: " + health.ToString();
         }
     }
 }

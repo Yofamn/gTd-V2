@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using TowerDefence;
+using TowerDefense;
 
-public class CoinManager : MonoBehaviour
+public class PlayerNumManager : MonoBehaviour
     {
-        public static CoinManager Instance;
+        public static PlayerNumManager Instance;
 
         float multiplier = PlayerStats.Instance?.coinIncomeMultiplier ?? 1f;
         [SerializeField] int coins = 100;
+        
+        [SerializeField] int health = 100;
+        
 
         private void Awake()
         {
@@ -23,8 +27,9 @@ public class CoinManager : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-
+            
             PlayerDisplay.Instance?.UpdateCoinText(coins);
+            PlayerDisplay.Instance?.UpdateHealthText(health);
         }
 
         public void AddCoins(int amount)
@@ -47,6 +52,10 @@ public class CoinManager : MonoBehaviour
         public int GetCoins()
         {
             return coins;
+        }
+        public int getHealth()
+        {
+            return health;
         }
     }
 

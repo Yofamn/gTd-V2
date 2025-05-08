@@ -9,7 +9,7 @@ namespace TowerDefense
         [Header("Placement Settings")]
         public GameObject towerPrefab;
         [SerializeField] private LayerMask buildableLayer;
-        CoinManager coinManager;
+        PlayerNumManager playerNumManager;
         private TextMeshProUGUI coinText;
 
         private MyGrid grid;
@@ -48,7 +48,7 @@ namespace TowerDefense
         {
             int towerCost = Tower_SO.GetCost(towerPrefab);
 
-            if (CoinManager.Instance.GetCoins() < towerCost)
+            if (PlayerNumManager.Instance.GetCoins() < towerCost)
             {
                 Debug.Log("Not enough gold to place tower!");
                 return;
@@ -80,7 +80,7 @@ namespace TowerDefense
             if (newTower != null)
             {
                 grid.Add(tileCoords, newTower);
-                CoinManager.Instance.SpendCoins(towerCost);
+                PlayerNumManager.Instance.SpendCoins(towerCost);
                 towerPrefab = null; // Clear selection after placing
             }
             else

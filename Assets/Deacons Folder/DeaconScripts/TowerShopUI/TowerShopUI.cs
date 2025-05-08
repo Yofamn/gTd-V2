@@ -23,7 +23,7 @@ namespace TowerDefense
         GameObject towerPrefab = towerPrefabs[index];
         int towerCost = Tower_SO.GetCost(towerPrefab);
 
-        if (CoinManager.Instance.GetCoins() >= towerCost)
+        if (PlayerNumManager.Instance.GetCoins() >= towerCost)
         {
 
 

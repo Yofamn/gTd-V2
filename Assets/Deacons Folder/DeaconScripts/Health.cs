@@ -4,23 +4,26 @@ using TMPro;
 namespace TowerDefense{
     public class Health : MonoBehaviour
     {
-        CoinManager coinManager;
+        PlayerNumManager playerNumManager;
 
+        int currentHealth;
         void Awake()
         {
-            coinManager = FindObjectOfType<CoinManager>();
+            playerNumManager = FindObjectOfType<PlayerNumManager>();
+            
+            currentHealth = playerNumManager != null ? playerNumManager.getHealth() : 100;
         }
 
-        public int currentHealth;
+        
 
         void TakeDamage(int damage)
             {
 
                 int damageApplied = Mathf.Min(damage, currentHealth);
 
-                if (damageApplied > 0 && coinManager != null && gameObject.CompareTag("Enemy"))
+                if (damageApplied > 0 && playerNumManager != null && gameObject.CompareTag("Enemy"))
                 {
-                    coinManager.AddCoins(damageApplied); // Give coins per damage taken
+                    playerNumManager.AddCoins(damageApplied); // Give coins per damage taken
                 }
                 currentHealth -= damage;
 
@@ -41,6 +44,7 @@ namespace TowerDefense{
             {
                 Health targethealth = target.GetComponent<Health>();
                 if (targethealth != null) {targethealth.TakeDamage(damage); }
+                
             }
             public void EnemyDeath(){
                 Destroy(gameObject);
