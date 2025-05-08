@@ -82,7 +82,7 @@ namespace TowerDefense
 
         void OnTriggerEnter(Collider other)
         {
-            if(other.gameObject.CompareTag("Enemy")) enemiesInRange.Add(other.gameObject);
+            if(other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Dreadnought")) enemiesInRange.Add(other.gameObject);
 
             if(!firing) StartCoroutine(DamageEnemyTarget());
         }
