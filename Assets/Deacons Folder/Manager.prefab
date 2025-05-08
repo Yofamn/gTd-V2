@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5176682543987456805}
   - component: {fileID: 4425462358646520582}
   - component: {fileID: -7223901240489155916}
-  - component: {fileID: 6224069336555700360}
   - component: {fileID: 6320997669855825129}
   m_Layer: 0
   m_Name: Manager
@@ -105,25 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a3f296126648b4c81c7408c24df415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6224069336555700360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2524094571127014122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f642e1ec9712104184f0dfec50f71f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerButtons:
-  - towerPrefab: {fileID: 639396978566363287, guid: 44d45e14bed52e2438f6af1304713e68, type: 3}
-    button: {fileID: 0}
-  - towerPrefab: {fileID: 4015088924154500602, guid: b924656f2f289024a9612c2c31bd6847, type: 3}
-    button: {fileID: 0}
-  - towerPrefab: {fileID: 3787089747317225702, guid: 3c41707745b94254e9feb70367c89160, type: 3}
-    button: {fileID: 0}
 --- !u!114 &6320997669855825129
 MonoBehaviour:
   m_ObjectHideFlags: 0

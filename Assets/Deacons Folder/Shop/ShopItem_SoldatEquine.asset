@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ShopItem_SoldatEquine
   m_EditorClassIdentifier: 
   Category: {fileID: 11400000, guid: d86159e4164bc4443ad6a5e23aeee33f, type: 2}
-  Name: 
-  Description: 
-  price: 60
+  Name: Soldat Equine
+  Description: Shotgunner with high damage but close range
+  price: 500
   ItemType: 0
   TowerPrefabToUnlock: {fileID: 639396978566363287, guid: 44d45e14bed52e2438f6af1304713e68, type: 3}
   HealthIncreaseAmount: 0
