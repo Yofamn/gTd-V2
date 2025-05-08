@@ -10,6 +10,9 @@ TagManager:
   - Buildable
   - Coins
   - Text
+  - healthText
+  - BossHealth
+  - Dreadnought
   layers:
   - Default
   - TransparentFX
