@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
+
 public class InteractionObject : MonoBehaviour
 {
-   [SerializeField] private string interactionText = "Press e to interact";
+   [SerializeField] private string interactionText = "I can be interacted with";
 
    public UnityEvent OnInteract = new UnityEvent();
    private void OnEnable()
@@ -19,7 +20,7 @@ public class InteractionObject : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.Return))
         {
             OnInteract.Invoke();
         }
