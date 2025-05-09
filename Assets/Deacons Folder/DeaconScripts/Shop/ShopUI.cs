@@ -24,6 +24,10 @@ public class ShopUI : MonoBehaviour
     Dictionary<ShopItemCategory, ShopUI_Category> ShopCategoryToUIMap;
     Dictionary<ShopItems, ShopUI_Item> ShopItemToUIMap;
 
+    void Update()
+    {
+        RefreshCoinDisplay();
+    }
     void Start(){
         //Begin testing code
         CurrentPurchaser = FindObjectOfType<Purchaser>();
@@ -167,6 +171,12 @@ public class ShopUI : MonoBehaviour
         RefreshShopUI_Items();
         RefreshShopUI_Common();
     }
+    void RefreshCoinDisplay()
+    {
+        if (CurrentPurchaser != null)
+            AvailableFunds.text = $"{(CurrentPurchaser.GetCurrentFunds())}";
+    }
+
 
     public void OnClickedExit(){
 
