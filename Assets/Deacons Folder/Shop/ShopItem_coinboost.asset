@@ -15,7 +15,7 @@ MonoBehaviour:
   Category: {fileID: 11400000, guid: 2edb26bea6ea0cf46bd7f7a0db366db2, type: 2}
   Name: Coin Multiplier
   Description: This upgrades how many coins you get per enemy by 1.2 times
-  price: 0
+  price: 500
   ItemType: 2
   TowerPrefabToUnlock: {fileID: 0}
   HealthIncreaseAmount: 0

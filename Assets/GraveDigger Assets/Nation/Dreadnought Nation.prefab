@@ -3586,7 +3586,7 @@ GameObject:
   - component: {fileID: -7218955168927637126}
   m_Layer: 0
   m_Name: Dreadnought Nation
-  m_TagString: Dreadnought
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
