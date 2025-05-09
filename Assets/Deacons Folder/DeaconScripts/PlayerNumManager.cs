@@ -8,7 +8,7 @@ public class PlayerNumManager : MonoBehaviour
     {
         public static PlayerNumManager Instance;
 
-        float multiplier = PlayerStats.Instance?.coinIncomeMultiplier ?? 1f;
+        float Multiplier => PlayerStats.Instance?.coinIncomeMultiplier ?? 1f;
         [SerializeField] int coins = 100;
         
         [SerializeField] int health = 100;
@@ -33,7 +33,7 @@ public class PlayerNumManager : MonoBehaviour
 
         public void AddCoins(int amount)
         {
-            coins += (int)(amount * multiplier);
+            coins += (int)(amount * Multiplier);
             PlayerDisplay.Instance?.UpdateCoinText(coins);
         }
 
