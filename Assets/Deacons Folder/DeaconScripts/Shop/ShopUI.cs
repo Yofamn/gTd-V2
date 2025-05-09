@@ -126,24 +126,34 @@ public class ShopUI : MonoBehaviour
         }
         RefreshShopUI_Common();
     }
-    public void OnClickedPurchase(){
+    public void OnClickedPurchase()
+    {
         CurrentPurchaser.SpendFunds(SelectedItem.price);
-        switch (SelectedItem.ItemType){
-            case ShopItems.ShopItemType.TowerUnlock: 
+
+        switch (SelectedItem.ItemType)
+        {
+            case ShopItems.ShopItemType.TowerUnlock:
                 TowerUnlockManager.Instance.UnlockTower(SelectedItem.TowerPrefabToUnlock);
                 buttonController.RefreshButtons();
+
+                // REMOVE the unlocked item from the list so it disappears
+                AvailableItems.Remove(SelectedItem);
                 break;
+
             case ShopItems.ShopItemType.HealthUpgrade:
                 PlayerStats.Instance.IncreaseMaxHealth(SelectedItem.HealthIncreaseAmount);
                 break;
+
             case ShopItems.ShopItemType.CoinIncomeBoost:
                 PlayerStats.Instance.MultiplyCoinIncome(SelectedItem.CoinIncomeMultiplier);
                 break;
         }
+
+        SelectedItem = null;
+        RefreshShopUI_Items();
         RefreshShopUI_Common();
-
-
     }
+
     public void OnClickedExit(){
 
     }
