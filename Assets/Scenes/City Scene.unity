@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.012217699, g: 0.009083719, b: 0.009041917, a: 1}
+  m_IndirectSpecularColor: {r: 0.012217704, g: 0.009083724, b: 0.009041921, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -39990,7 +39990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7161991636371561340, guid: c0e55e96f00742c478accfc2dd86fc96, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7161991636371561340, guid: c0e55e96f00742c478accfc2dd86fc96, type: 3}
       propertyPath: m_AnchorMin.x
@@ -39998,7 +39998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7161991636371561340, guid: c0e55e96f00742c478accfc2dd86fc96, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7161991636371561340, guid: c0e55e96f00742c478accfc2dd86fc96, type: 3}
       propertyPath: m_SizeDelta.x
@@ -40042,7 +40042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7161991636371561340, guid: c0e55e96f00742c478accfc2dd86fc96, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 182
+      value: -45.9
       objectReference: {fileID: 0}
     - target: {fileID: 7161991636371561340, guid: c0e55e96f00742c478accfc2dd86fc96, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
