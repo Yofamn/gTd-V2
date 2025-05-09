@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.AI;
 using Unity.VisualScripting;
+using TowerDefense;
 public class ShopUI : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI AvailableFunds;
@@ -15,6 +16,7 @@ public class ShopUI : MonoBehaviour
     [SerializeField] GameObject CategoryUIPrefab;
     [SerializeField] GameObject ItemUIPrefab;
     [SerializeField] List<ShopItems> AvailableItems;
+    Health playerHealth;
     IPurchaser CurrentPurchaser;
     List<ShopItemCategory> ShopCategories;
     ShopItemCategory SelectedCategory;
@@ -26,6 +28,7 @@ public class ShopUI : MonoBehaviour
         //Begin testing code
         CurrentPurchaser = FindObjectOfType<Purchaser>();
         buttonController = FindObjectOfType<TowerButtonController>();
+
         //end testing code
         RefreshShopUI_Common();
         RefreshShopUI_Categories();
@@ -141,8 +144,19 @@ public class ShopUI : MonoBehaviour
                 break;
 
             case ShopItems.ShopItemType.HealthUpgrade:
-                PlayerStats.Instance.IncreaseMaxHealth(SelectedItem.HealthIncreaseAmount);
-                break;
+            PlayerStats.Instance.IncreaseMaxHealth(SelectedItem.HealthIncreaseAmount);
+
+            // Find the player object (with tag "Player")
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                Health playerHealth = player.GetComponent<Health>();
+                if (playerHealth != null)
+                {
+                    playerHealth.addHealth(SelectedItem.HealthIncreaseAmount);
+                }
+            }
+            break;
 
             case ShopItems.ShopItemType.CoinIncomeBoost:
                 PlayerStats.Instance.MultiplyCoinIncome(SelectedItem.CoinIncomeMultiplier);

@@ -17,7 +17,9 @@ namespace TowerDefense{
             currentHealth = playerNumManager != null ? playerNumManager.getHealth() : 100;
         }
 
-        
+        public void addHealth(int amount){
+            currentHealth += amount;
+        }
         void TakeDamage(int damage)
             {
 
