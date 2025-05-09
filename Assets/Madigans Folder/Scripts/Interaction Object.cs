@@ -20,7 +20,7 @@ public class InteractionObject : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Return))
+        if(Input.GetKeyDown(KeyCode.E))
         {
             OnInteract.Invoke();
         }

@@ -10192,7 +10192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f6665b0b5b8fe4f9476b6cde2b6899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionText: Press return to interact
+  interactionText: Press e to interact
   OnInteract:
     m_PersistentCalls:
       m_Calls:
