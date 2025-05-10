@@ -135,12 +135,6 @@ public class Spawner : MonoBehaviour
             {
                 spawn = false;
                 //buttonAppear();
-                if (waveCounter >= 6)
-                {
-                    GameObject dreadHealth = GameObject.FindGameObjectWithTag("BossHealth");
-                    dreadHealth.SetActive(true);
-                    PlayerDisplay.Instance.UpdateDreadHealthText(5000);
-                }
                 yield break;
             }
             Instantiate(WaveSeven[currentEnemy], transform.position, transform.rotation);
@@ -159,36 +153,43 @@ public class Spawner : MonoBehaviour
         {
             StartCoroutine(Spawn());
             waveCounter++;
+            
         }
 
         else if(waveCounter == 1)
         {
             StartCoroutine(SpawnWave2());
             waveCounter++;
+            PlayerNumManager.Instance.AddCoins(100);
         }
         else if(waveCounter == 2)
         {
             StartCoroutine(SpawnWave3());
             waveCounter++;
+            PlayerNumManager.Instance.AddCoins(150);
         }
         else if(waveCounter == 3)
         {
             StartCoroutine(SpawnWave4());
             waveCounter++;
+            PlayerNumManager.Instance.AddCoins(150);
         }
         else if(waveCounter == 4)
         {
             StartCoroutine(SpawnWave5());
             waveCounter++;
+            PlayerNumManager.Instance.AddCoins(200);
         }
         else if(waveCounter == 5)
         {
             StartCoroutine(SpawnWave6());
             waveCounter++;
+            PlayerNumManager.Instance.AddCoins(200);
         }
         else if(waveCounter == 6)
         {
             StartCoroutine(SpawnWave7());
+            PlayerNumManager.Instance.AddCoins(250);
         }
         //Invoke("buttonAppear", 10);
     }

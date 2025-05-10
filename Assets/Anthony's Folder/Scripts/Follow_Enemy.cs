@@ -6,38 +6,23 @@ namespace TowerDefense
 {
     public class Follow_Enemy : MonoBehaviour
     {
-        Tower tower; // Tower component reference
-        public bool pitch = true; // Whether to rotate on pitch axis
-        public bool yaw = true; // Whether to rotate on yaw axis
+        [SerializeField] private float rotationSpeed = 5f; // Speed of rotation (can be adjusted in the Inspector)
 
-
-        // Start is called before the first frame update
-        void Start()
+        // Function to rotate the tower towards the enemy
+        public void RotateTowardsEnemy(GameObject target)
         {
-            tower = GetComponentInParent<Tower>();
-        }
+            if (!target) return;
 
-        // Update is called once per frame
-        void Update()
-        {
-            // In order to get enemyTarget from tower we have
-            // to make it public
-            if (!tower.GetEnemyTarget()) return; // if target is null stop right there
+            // Calculate the direction to the target
+            Vector3 direction = target.transform.position - transform.position;
+            direction.y = 0; // Ensure the rotation stays on the horizontal plane (assuming the tower rotates around the Y axis)
 
-            // Rotate this GameObject towards enemyTarget
-            // Get direction (target.position - transform.position)
-            Vector3 direction = tower.GetEnemyTarget().transform.position - transform.position;
+            // Calculate the target rotation
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
 
-            // Get rotation from direction and convert to eulers
-            Vector3 eulerRotation = Quaternion.LookRotation(direction).eulerAngles;
-            
-            // Whether this object should rotate up and down 
-            // (good for bow and arrow bad for cannon)
-            eulerRotation.x = pitch ? eulerRotation.x : 0f;
-            eulerRotation.y = yaw ? eulerRotation.y : 0f;
+            // Smoothly rotate towards the target
 
-            // Assign rotation to transform by converting euler back into quaternion
-            transform.rotation = Quaternion.Euler(eulerRotation);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
         }
     }
 }

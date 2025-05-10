@@ -10,25 +10,27 @@ namespace TowerDefense
         [SerializeField] private List<GameObject> enemiesInRange = new List<GameObject>();
         public Tower_SO towerType;
         private bool firing = false;
-        GameObject enemeyTarget;
+        GameObject enemyTarget;
         Animator animator;
+        Follow_Enemy follow_Enemy;
 
         private void Start()
         {
             animator = GetComponent<Animator>();
+            follow_Enemy = GetComponent<Follow_Enemy>();
         }
 
         public GameObject GetEnemyTarget()
         {
-            return enemeyTarget;
+            return enemyTarget;
         }
 
         public void DamageTarget()
         {
-            if(!enemeyTarget)
+            if(!enemyTarget)
             return;
             
-            Health.TryDamage(enemeyTarget, towerType.damage);
+            Health.TryDamage(enemyTarget, towerType.damage);
         }
 
         private void removeDestroyedEnemies()
@@ -49,22 +51,16 @@ namespace TowerDefense
         {
             firing = true;
 
-            /*while(enemiesInRange.Count > 0)
-            {
-                removeDestroyedEnemies();
-                if(enemiesInRange.Count > 0)
-                {
-                    enemeyTarget = enemiesInRange[0];
-                    animator.SetTrigger("Fire");
-                }
-                
-                yield return new WaitForSeconds(towerType.fireRate);
-            }*/
-
             while(enemiesInRange.Count > 0)
             {
                 if(!enemiesInRange[0]) enemiesInRange.RemoveAt(0);
-                else Health.TryDamage(enemiesInRange[0], towerType.damage);
+                else 
+                {  
+                    enemyTarget = enemiesInRange[0];
+                    follow_Enemy.RotateTowardsEnemy(enemyTarget);
+                    Health.TryDamage(enemiesInRange[0], towerType.damage);
+                    
+                }
 
                 yield return new WaitForSeconds(towerType.fireRate);
 
@@ -82,7 +78,7 @@ namespace TowerDefense
 
         void OnTriggerEnter(Collider other)
         {
-            if(other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Dreadnought")) enemiesInRange.Add(other.gameObject);
+            if(other.gameObject.CompareTag("Enemy")) enemiesInRange.Add(other.gameObject);
 
             if(!firing) StartCoroutine(DamageEnemyTarget());
         }

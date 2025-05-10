@@ -36,10 +36,6 @@ namespace TowerDefense{
                         PlayerDisplay.Instance.UpdateHealthText(currentHealth);
                     }
 
-                    if (gameObject.CompareTag("Dreadnought") && PlayerDisplay.Instance != null)
-                    {
-                        PlayerDisplay.Instance.UpdateDreadHealthText(currentHealth);
-                    }
                 
                 if(currentHealth <= 0)
                 {

@@ -759,6 +759,7 @@ GameObject:
   - component: {fileID: 1392869840111312715}
   - component: {fileID: -2401491530810387652}
   - component: {fileID: -4395803092683544837}
+  - component: {fileID: 6877955202939727686}
   m_Layer: 0
   m_Name: Vangaurd Nation New
   m_TagString: Enemy
@@ -817,8 +818,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 2
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &-4395803092683544837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,6 +833,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 50
+--- !u!114 &6877955202939727686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748839773169263403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef612e920c49bd4da6feceb28ba4ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  hoverHealthText: {fileID: 0}
 --- !u!1 &1770432904698056249
 GameObject:
   m_ObjectHideFlags: 0
