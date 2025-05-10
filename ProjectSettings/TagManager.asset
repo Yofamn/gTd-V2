@@ -11,8 +11,7 @@ TagManager:
   - Coins
   - Text
   - healthText
-  - BossHealth
-  - Dreadnought
+  - EnemDis
   layers:
   - Default
   - TransparentFX
