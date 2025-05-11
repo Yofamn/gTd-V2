@@ -2101,6 +2101,7 @@ GameObject:
   - component: {fileID: -681995266453520523}
   - component: {fileID: -8578609093755159251}
   - component: {fileID: 6560225220270475347}
+  - component: {fileID: 5260555120383991578}
   m_Layer: 0
   m_Name: Soldat Nation
   m_TagString: Enemy
@@ -2170,7 +2171,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 2
   m_Center: {x: 0, y: 2, z: 0}
@@ -2188,6 +2189,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   hoverHealthText: {fileID: 0}
+--- !u!65 &5260555120383991578
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457009561746304043}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.061764, y: 6.106418, z: 1}
+  m_Center: {x: -0.07919371, y: 2.553209, z: 0}
 --- !u!1 &6520062314170571465
 GameObject:
   m_ObjectHideFlags: 0

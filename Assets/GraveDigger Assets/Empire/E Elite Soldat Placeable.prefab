@@ -3525,6 +3525,7 @@ GameObject:
   - component: {fileID: -5065560409893218896}
   - component: {fileID: -6809398438211251304}
   - component: {fileID: 5079432461983291542}
+  - component: {fileID: -5621461649968353492}
   m_Layer: 2
   m_Name: E Elite Soldat Placeable
   m_TagString: Untagged
@@ -3636,6 +3637,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 20
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-5621461649968353492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954837094532530006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d8d7b6a10055847a8ef31e64122b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 300
 --- !u!1 &5991420387188944676
 GameObject:
   m_ObjectHideFlags: 0

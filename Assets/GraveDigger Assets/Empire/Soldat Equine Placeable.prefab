@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 8972613294654920754}
   - component: {fileID: 7696007636350054153}
   - component: {fileID: -7271823653336109322}
+  - component: {fileID: 2472956235198804768}
   m_Layer: 2
   m_Name: Soldat Equine Placeable
   m_TagString: Untagged
@@ -453,6 +454,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 15
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2472956235198804768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639396978566363287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d8d7b6a10055847a8ef31e64122b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 300
 --- !u!1 &692169207087890425
 GameObject:
   m_ObjectHideFlags: 0

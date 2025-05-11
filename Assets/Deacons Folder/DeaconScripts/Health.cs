@@ -12,9 +12,13 @@ namespace TowerDefense{
         void Awake()
         {
             playerNumManager = FindObjectOfType<PlayerNumManager>();
-            
             if(CompareTag("Player"))
-            currentHealth = playerNumManager != null ? playerNumManager.getHealth() : 100;
+            {
+                
+                currentHealth = playerNumManager != null ? playerNumManager.getHealth() : 100;
+            }
+            
+            Debug.Log("Enemy HP: " + currentHealth);
         }
 
         public void addHealth(int amount){
@@ -60,9 +64,9 @@ namespace TowerDefense{
                 }
                 
             }
-            public void EnemyDeath(){
-                Destroy(gameObject);
-                // death animation or sound
+            public void EnemyDeath()
+            {
+                Destroy(gameObject); 
             }
             public void PlayerDeath(){
                 SceneManager.LoadScene("Death Screen");

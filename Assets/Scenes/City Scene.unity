@@ -5516,7 +5516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8689,6 +8689,10 @@ PrefabInstance:
     - target: {fileID: 2524094571127014122, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
       propertyPath: m_Name
       value: Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557982708228518863, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
+      propertyPath: coins
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 5176682543987456805, guid: ee73182ef80954242ba5fb250349d52e, type: 3}
       propertyPath: coinText
@@ -18026,54 +18030,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -5032506839213285162, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: coinText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 880216088224706158, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018773063455361509, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: gold
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018773063455361509, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018773063455361509, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: towerPrefab
-      value: 
-      objectReference: {fileID: 5954837094532530006, guid: 275cb03f56130494986adf1f9f623924, type: 3}
-    - target: {fileID: 2018773063455361509, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: towerSlots.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018773063455361509, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: towerSlots.Array.data[0]
-      value: 
-      objectReference: {fileID: 3787089747317225702, guid: 3c41707745b94254e9feb70367c89160, type: 3}
-    - target: {fileID: 2018773063455361509, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: towerSlots.Array.data[1]
-      value: 
-      objectReference: {fileID: 4015088924154500602, guid: b924656f2f289024a9612c2c31bd6847, type: 3}
-    - target: {fileID: 2018773063455361509, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: towerSlots.Array.data[2]
-      value: 
-      objectReference: {fileID: 639396978566363287, guid: 44d45e14bed52e2438f6af1304713e68, type: 3}
-    - target: {fileID: 2018773063455361509, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: towerSlots.Array.data[3]
-      value: 
-      objectReference: {fileID: 5954837094532530006, guid: 275cb03f56130494986adf1f9f623924, type: 3}
-    - target: {fileID: 4097533490220338125, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5631084190000264050, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: coinText
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7726259095146717963, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
       propertyPath: m_LocalPosition.x
       value: -61
@@ -18118,16 +18074,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8713975823234950178, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8713975823234950178, guid: 6373f14de8b388e479c45f644608fa61, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

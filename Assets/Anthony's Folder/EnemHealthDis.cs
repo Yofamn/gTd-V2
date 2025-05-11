@@ -13,10 +13,19 @@ public Camera mainCamera;
     void Awake()
     {
         mainCamera = Camera.main;
-        hoverHealthText = GameObject.FindWithTag("EnemDis")?.GetComponent<TextMeshProUGUI>();
+        //hoverHealthText = GameObject.FindWithTag("EnemDis")?.GetComponent<TextMeshProUGUI>();
+        
     }
     void Update()
     {
+    if (hoverHealthText == null)
+    {
+        GameObject textObject = GameObject.FindWithTag("EnemDis");
+        if (textObject != null)
+        {
+            hoverHealthText = textObject.GetComponent<TextMeshProUGUI>();
+        }
+    }
         ShowHealthOnHover();
     }
 
@@ -42,7 +51,7 @@ public Camera mainCamera;
     // Hide text if nothing is hovered or hoverHealthText is null
     if (hoverHealthText != null)
     {
-        hoverHealthText.gameObject.SetActive(false);
+        hoverHealthText.text = $"";
     }
     lastHoveredHealth = null;
     }
