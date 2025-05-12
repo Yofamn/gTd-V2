@@ -9,7 +9,6 @@ namespace TowerDefense{
         PlayerNumManager playerNumManager;
         
         [SerializeField]int currentHealth;
-        [SerializeField] private bool isFinalEnemy = false;
         [SerializeField] private GameObject nextSceneButton;
         void Awake()
         {
@@ -21,7 +20,7 @@ namespace TowerDefense{
             }
             
             Debug.Log("Enemy HP: " + currentHealth);
-            if (isFinalEnemy && nextSceneButton == null)
+            if (nextSceneButton == null)
             {
                 nextSceneButton = GameObject.Find("NextSceneButton");
             }
@@ -78,13 +77,12 @@ namespace TowerDefense{
             }
             public void EnemyDeath()
             {
-                if(isFinalEnemy && nextSceneButton != null)
-                {
-                nextSceneButton.SetActive(true);
+                
+
+                    Destroy(gameObject);
                 }
-                Destroy(gameObject); 
-            }
-            public void PlayerDeath(){
+
+        public void PlayerDeath(){
                 SceneManager.LoadScene("Death Screen");
                 //send to main screen
             }
