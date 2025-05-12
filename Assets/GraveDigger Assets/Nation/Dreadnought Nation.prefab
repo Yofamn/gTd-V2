@@ -3637,6 +3637,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 2500
+  isFinalEnemy: 1
+  nextSceneButton: {fileID: 0}
 --- !u!135 &-7218955168927637126
 SphereCollider:
   m_ObjectHideFlags: 0
