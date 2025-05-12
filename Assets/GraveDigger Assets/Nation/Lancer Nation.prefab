@@ -2545,8 +2545,8 @@ GameObject:
   - component: {fileID: 7483390380403961275}
   - component: {fileID: 766750377777002879}
   - component: {fileID: -7186188374062224312}
-  - component: {fileID: -8186623761747152258}
   - component: {fileID: 7507814426027198180}
+  - component: {fileID: 3907281258164941752}
   m_Layer: 0
   m_Name: Lancer Nation
   m_TagString: Enemy
@@ -2600,8 +2600,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 30
---- !u!135 &-8186623761747152258
-SphereCollider:
+--- !u!114 &7507814426027198180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4295237717417342421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef612e920c49bd4da6feceb28ba4ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  hoverHealthText: {fileID: 0}
+--- !u!65 &3907281258164941752
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2619,22 +2633,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2.1159897
-  m_Center: {x: 0, y: 2.9108753, z: 0}
---- !u!114 &7507814426027198180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4295237717417342421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef612e920c49bd4da6feceb28ba4ec4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  hoverHealthText: {fileID: 0}
+  m_Size: {x: 4.061764, y: 6.106418, z: 1}
+  m_Center: {x: -0.07919371, y: 2.553209, z: 0}
 --- !u!1 &4469714985128393833
 GameObject:
   m_ObjectHideFlags: 0

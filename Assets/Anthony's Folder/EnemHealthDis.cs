@@ -18,41 +18,41 @@ public Camera mainCamera;
     }
     void Update()
     {
-    if (hoverHealthText == null)
-    {
-        GameObject textObject = GameObject.FindWithTag("EnemDis");
-        if (textObject != null)
+        if (hoverHealthText == null)
         {
-            hoverHealthText = textObject.GetComponent<TextMeshProUGUI>();
+            GameObject textObject = GameObject.FindWithTag("EnemDis");
+            if (textObject != null)
+            {
+                hoverHealthText = textObject.GetComponent<TextMeshProUGUI>();
+            }
         }
-    }
         ShowHealthOnHover();
     }
 
     void ShowHealthOnHover()
     {
-    Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-    RaycastHit hit;
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
 
-    if (Physics.Raycast(ray, out hit))
-    {
-        Health health = hit.collider.GetComponent<Health>();
-
-        if (health != null && hoverHealthText != null)
+        if (Physics.Raycast(ray, out hit))
         {
-            lastHoveredHealth = health;
-            hoverHealthText.text = $"Health: {health.getHealth()}";
-            hoverHealthText.transform.position = Input.mousePosition;
-            hoverHealthText.gameObject.SetActive(true);
-            return;
-        }
-    }
+            Health health = hit.collider.GetComponent<Health>();
 
-    // Hide text if nothing is hovered or hoverHealthText is null
-    if (hoverHealthText != null)
-    {
-        hoverHealthText.text = $"";
-    }
-    lastHoveredHealth = null;
+            if (health != null && hoverHealthText != null)
+            {
+                lastHoveredHealth = health;
+                hoverHealthText.text = $"Health: {health.getHealth()}";
+                hoverHealthText.transform.position = Input.mousePosition;
+                hoverHealthText.gameObject.SetActive(true);
+                return;
+            }
+        }
+
+        // Hide text if nothing is hovered or hoverHealthText is null
+        if (hoverHealthText != null)
+        {
+            hoverHealthText.text = $"";
+        }
+        lastHoveredHealth = null;
     }
 }

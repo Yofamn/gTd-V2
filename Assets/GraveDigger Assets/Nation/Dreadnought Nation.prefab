@@ -3583,9 +3583,9 @@ GameObject:
   - component: {fileID: 7490996587609193385}
   - component: {fileID: 5566863547883791213}
   - component: {fileID: -7042317071469537765}
-  - component: {fileID: -7218955168927637126}
   - component: {fileID: -4502084164298566507}
   - component: {fileID: 723409318524954386}
+  - component: {fileID: 2501464000322308241}
   m_Layer: 0
   m_Name: Dreadnought Nation
   m_TagString: Enemy
@@ -3638,27 +3638,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 2500
---- !u!135 &-7218955168927637126
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6900779296873516534}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 2.706329
-  m_Center: {x: 0, y: 2.706329, z: 0}
 --- !u!114 &-4502084164298566507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3686,6 +3665,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFinalBoss: 1
+--- !u!65 &2501464000322308241
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6900779296873516534}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.061764, y: 6.106418, z: 1}
+  m_Center: {x: -0.07919371, y: 2.553209, z: 0}
 --- !u!1 &7033867234432592945
 GameObject:
   m_ObjectHideFlags: 0

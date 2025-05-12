@@ -8,7 +8,7 @@ namespace TowerDefense
     public class DeaconsCursor : MonoBehaviour
     {
         [Header("Placement Settings")]
-        [SerializeField] private LayerMask buildableLayer;
+        private LayerMask buildableLayer;
 
         private MyGrid grid;
 
@@ -17,16 +17,20 @@ namespace TowerDefense
             grid = FindObjectOfType<MyGrid>();
             if (grid == null)
                 Debug.LogError("No MyGrid found in scene!");
+            buildableLayer = 1<< LayerMask.NameToLayer("BuildSurface");
         }
-        public GameObject selectedTower = TowerButtonController.Instance?.SelectedTowerPrefab;
+
+
+        public GameObject selectedTower;
         private void Update()
         {
-            // Use TowerButtonController to get the selected tower prefab
+            selectedTower = TowerButtonController.Instance?.SelectedTowerPrefab;
             
             if (selectedTower == null) return;
 
             Vector3Int tileCoords = GetTargetTile();
             transform.position = MyGrid.GridToWorld(tileCoords);
+
 
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
@@ -39,6 +43,10 @@ namespace TowerDefense
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, 100f, buildableLayer))
             {
+                if (hit.collider != null && hit.collider.CompareTag("Tower")) 
+                {
+                    return Vector3Int.zero; // Don't place a tower on another tower
+                }
                 return MyGrid.WorldToGrid(hit.point + hit.normal * 0.5f);
             }
             return Vector3Int.zero;
@@ -66,7 +74,7 @@ namespace TowerDefense
             Vector3 rayOrigin = new Vector3(worldPosition.x, 50f, worldPosition.z);
             if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, 100f, buildableLayer))
             {
-                if (Vector3.Angle(hit.normal, Vector3.up) > 5f)
+                if (Vector3.Angle(hit.normal, Vector3.up) > 1f)
                 {
                     Debug.Log("Surface too steep to build.");
                     return;

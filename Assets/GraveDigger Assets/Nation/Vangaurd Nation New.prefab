@@ -757,9 +757,9 @@ GameObject:
   m_Component:
   - component: {fileID: 890545736800393149}
   - component: {fileID: 1392869840111312715}
-  - component: {fileID: -2401491530810387652}
   - component: {fileID: -4395803092683544837}
   - component: {fileID: 6877955202939727686}
+  - component: {fileID: 1287782160031225714}
   m_Layer: 0
   m_Name: Vangaurd Nation New
   m_TagString: Enemy
@@ -799,27 +799,6 @@ MonoBehaviour:
   path: {fileID: 0}
   index: 0
   enemy_SO: {fileID: 11400000, guid: c4f9da0aa0c5f19469c393ba2bc10960, type: 2}
---- !u!135 &-2401491530810387652
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1748839773169263403}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 2
-  m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &-4395803092683544837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,6 +826,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   hoverHealthText: {fileID: 0}
+--- !u!65 &1287782160031225714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748839773169263403}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.061764, y: 6.106418, z: 1}
+  m_Center: {x: -0.07919371, y: 2.553209, z: 0}
 --- !u!1 &1770432904698056249
 GameObject:
   m_ObjectHideFlags: 0
