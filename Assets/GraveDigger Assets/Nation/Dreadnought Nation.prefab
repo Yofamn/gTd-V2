@@ -3585,6 +3585,7 @@ GameObject:
   - component: {fileID: -7042317071469537765}
   - component: {fileID: -7218955168927637126}
   - component: {fileID: -4502084164298566507}
+  - component: {fileID: 723409318524954386}
   m_Layer: 0
   m_Name: Dreadnought Nation
   m_TagString: Enemy
@@ -3637,7 +3638,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 2500
-  nextSceneButton: {fileID: 0}
 --- !u!135 &-7218955168927637126
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3673,6 +3673,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   hoverHealthText: {fileID: 0}
+--- !u!114 &723409318524954386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6900779296873516534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5d6e7546d964a41bf7b51d3be4e7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFinalBoss: 1
 --- !u!1 &7033867234432592945
 GameObject:
   m_ObjectHideFlags: 0
