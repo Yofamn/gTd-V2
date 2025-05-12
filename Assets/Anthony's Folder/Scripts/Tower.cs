@@ -13,13 +13,17 @@ namespace TowerDefense
         GameObject enemyTarget;
         Animator animator;
         Follow_Enemy follow_Enemy;
-
+        [SerializeField] GameObject range;
         private void Start()
         {
             animator = GetComponent<Animator>();
             follow_Enemy = GetComponent<Follow_Enemy>();
+            range.SetActive(false);
         }
-
+        void Update()
+        {
+            
+        }
         public GameObject GetEnemyTarget()
         {
             return enemyTarget;
@@ -87,5 +91,15 @@ namespace TowerDefense
         {
             enemiesInRange.Remove(other.gameObject);
         }
+        void OMouseEnter()
+        {
+            range.SetActive(true);
+        }
+        void OnMouseExit()
+        {
+            range.SetActive(false);
+        }
+        
+        // https://www.google.com/search?q=unity+how+to+get+gameobject+of+a+child+in+parent+prefab&sca_esv=b703f1cd0674f892&rlz=1C1GCHA_enUS1124US1124&ei=-1ciaK3FMv3dwN4PmLTS-AE&oq=unity+how+to+get+gameobject+of+a+child+in+parent&gs_lp=Egxnd3Mtd2l6LXNlcnAiMHVuaXR5IGhvdyB0byBnZXQgZ2FtZW9iamVjdCBvZiBhIGNoaWxkIGluIHBhcmVudCoCCAAyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKABMgUQIRigATIFECEYnwVIzUtQkwlYkD9wBngBkAEBmAGeAaABwxKqAQQyNy4zuAEByAEA-AEBmAIhoALfEcICChAAGLADGNYEGEfCAgYQABgWGB7CAgsQABiABBiGAxiKBcICBRAAGO8FwgIFEAAYgATCAgUQIRirApgDAIgGAZAGB5IHBDMxLjKgB-OtAbIHBDI1LjK4B80R&sclient=gws-wiz-serp
     }
 }

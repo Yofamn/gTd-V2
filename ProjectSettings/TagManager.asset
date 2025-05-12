@@ -15,6 +15,7 @@ TagManager:
   - BossHealth
   - Interactable
   - NextSceneButton
+  - Tower
   layers:
   - Default
   - TransparentFX

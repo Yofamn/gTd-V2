@@ -148,6 +148,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sitting King
       objectReference: {fileID: 0}
+    - target: {fileID: 5538116905006474335, guid: 46eb37caa8b9935459b019579ef3b4eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7932797071164808565, guid: 46eb37caa8b9935459b019579ef3b4eb, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.097

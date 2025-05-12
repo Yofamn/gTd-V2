@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7552730247677747108}
   - component: {fileID: 3568464095266505607}
   - component: {fileID: 3335448894808032088}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Elevator1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7827873589914197341}
   - component: {fileID: 1451075351332437909}
   - component: {fileID: 2035753734143598415}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Selector1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1502239644879920580}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: ESoldat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 6253342259395598775}
   - component: {fileID: 2174719532883938656}
   - component: {fileID: 1141546910883405234}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Metal6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 3914033154367892078}
   - component: {fileID: 5450279666601984162}
   - component: {fileID: 7149298534252240753}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Dogtags1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 4847226530146498438}
   - component: {fileID: 6457846585413717101}
   - component: {fileID: 8996770981107694736}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Right Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 2986539956313154831}
   - component: {fileID: 8377681472912819113}
   - component: {fileID: 1228502849559346662}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Empiretag2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 6073104343929800452}
   - component: {fileID: 3389666122778670866}
   - component: {fileID: 4015085027959564827}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Left Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 6833145280879475692}
   - component: {fileID: 978314402082909189}
   - component: {fileID: 1246604208877215858}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Covera1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 5658867181383248812}
   - component: {fileID: 6878594023513757284}
   - component: {fileID: 6989652579083720699}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Right Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +817,7 @@ GameObject:
   - component: {fileID: 975812997320613560}
   - component: {fileID: 47542841047656244}
   - component: {fileID: 1429094861128696360}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Sheathempire1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -900,7 +900,7 @@ GameObject:
   - component: {fileID: 7018826806894922702}
   - component: {fileID: 5663118775750026291}
   - component: {fileID: 8888734489399258162}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,7 +983,7 @@ GameObject:
   - component: {fileID: 8822727253284022961}
   - component: {fileID: 4422689060196367772}
   - component: {fileID: 8030257998278371623}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 9197952278958081475}
   - component: {fileID: 4533602925219355644}
   - component: {fileID: 8371739474211017577}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Sign1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1149,7 +1149,7 @@ GameObject:
   - component: {fileID: 8870541044837210052}
   - component: {fileID: 7073477860647956513}
   - component: {fileID: 162351354531547977}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Wood1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1230,7 +1230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8374654305435088131}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Prince Rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1264,7 +1264,7 @@ GameObject:
   - component: {fileID: 5649881439887491025}
   - component: {fileID: 534537538124682754}
   - component: {fileID: 190346723703010980}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Knock1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1345,7 +1345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3792773356802394284}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Prince
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1388,7 +1388,7 @@ GameObject:
   - component: {fileID: 731768088578305970}
   - component: {fileID: 7071967350242972884}
   - component: {fileID: 5837600086676781159}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Wood1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1471,7 +1471,7 @@ GameObject:
   - component: {fileID: 3862089354761852801}
   - component: {fileID: 8021695708227744708}
   - component: {fileID: 285009605884549273}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Metal5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1554,7 +1554,7 @@ GameObject:
   - component: {fileID: 2069081980742267383}
   - component: {fileID: 1888538621428405943}
   - component: {fileID: 6925677398103455067}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Metal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1637,7 +1637,7 @@ GameObject:
   - component: {fileID: 8359782967099689847}
   - component: {fileID: 3371173874965818577}
   - component: {fileID: 5102607306485415121}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Empiretag1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1720,7 +1720,7 @@ GameObject:
   - component: {fileID: 583675579014084964}
   - component: {fileID: 650144230668124316}
   - component: {fileID: 2234210083177343221}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Bolt1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1806,9 +1806,9 @@ GameObject:
   - component: {fileID: 3169643038581149150}
   - component: {fileID: -2167770984601548313}
   - component: {fileID: -2654935113162607196}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Soldat Prince Rifle Placeable
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1938,7 +1938,7 @@ GameObject:
   - component: {fileID: 8443885004887497960}
   - component: {fileID: 6824716256220598463}
   - component: {fileID: 3519450804396864882}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Blade1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2021,7 +2021,7 @@ GameObject:
   - component: {fileID: 1668809017405179439}
   - component: {fileID: 1036395332039563174}
   - component: {fileID: 7820918109804154581}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Blade3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2104,7 +2104,7 @@ GameObject:
   - component: {fileID: 7900533500838686920}
   - component: {fileID: 1895169495586216189}
   - component: {fileID: 3662320015714110532}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Leather2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2187,7 +2187,7 @@ GameObject:
   - component: {fileID: 4286948611379125153}
   - component: {fileID: 4683437951951010483}
   - component: {fileID: 1459265380028730715}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Coverb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2270,7 +2270,7 @@ GameObject:
   - component: {fileID: 2689864267712450661}
   - component: {fileID: 2714201472637161078}
   - component: {fileID: 7401873963050491629}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cloth1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2353,7 +2353,7 @@ GameObject:
   - component: {fileID: 1791075772055743834}
   - component: {fileID: 2140541907651628195}
   - component: {fileID: 752614774536677916}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Trigger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2436,7 +2436,7 @@ GameObject:
   - component: {fileID: 3314591388522414812}
   - component: {fileID: 7458678714533080219}
   - component: {fileID: 4212254740097334958}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Heal1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2517,7 +2517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4962522995362870461}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: __RigMeta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2550,7 +2550,7 @@ GameObject:
   - component: {fileID: 7625201849032063599}
   - component: {fileID: 948427343693380974}
   - component: {fileID: 8583311352533232111}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Steel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2633,7 +2633,7 @@ GameObject:
   - component: {fileID: 4513084729224125849}
   - component: {fileID: 3661928684165031035}
   - component: {fileID: 4575591047896205747}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Frame1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2716,7 +2716,7 @@ GameObject:
   - component: {fileID: 5100427915079913280}
   - component: {fileID: 4476693845699979332}
   - component: {fileID: 951064645029030824}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Blade4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2799,7 +2799,7 @@ GameObject:
   - component: {fileID: 7961696421871764111}
   - component: {fileID: 654309192490177332}
   - component: {fileID: 7808457143954845528}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Metal3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2882,7 +2882,7 @@ GameObject:
   - component: {fileID: 3526313176638104204}
   - component: {fileID: 8850221519803833357}
   - component: {fileID: 2311820011829147073}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Metal4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2965,7 +2965,7 @@ GameObject:
   - component: {fileID: 8532097378072957422}
   - component: {fileID: 7582932896108148256}
   - component: {fileID: 5382419485339439448}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Scarf1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3048,7 +3048,7 @@ GameObject:
   - component: {fileID: 376247039582043045}
   - component: {fileID: 4132379456615229773}
   - component: {fileID: 8377153091120473124}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Leather1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3129,7 +3129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6112164902183337480}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3168,7 +3168,7 @@ GameObject:
   - component: {fileID: 6982823106540535986}
   - component: {fileID: 254217464390701934}
   - component: {fileID: 7504335391145421682}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Casing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3251,7 +3251,7 @@ GameObject:
   - component: {fileID: 3338137803872825400}
   - component: {fileID: 4906713383639584718}
   - component: {fileID: 7137530303805952023}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Blade2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3334,7 +3334,7 @@ GameObject:
   - component: {fileID: 8362992220095051386}
   - component: {fileID: 4458073105146519263}
   - component: {fileID: 7142588671890066081}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Bullet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3415,7 +3415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3855535371887131993}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: __RigMeta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3448,7 +3448,7 @@ GameObject:
   - component: {fileID: 2610305362939068686}
   - component: {fileID: 6468701146122662283}
   - component: {fileID: 2110591139147071075}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Left Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3531,7 +3531,7 @@ GameObject:
   - component: {fileID: 2750453853638611448}
   - component: {fileID: 7986418894930349226}
   - component: {fileID: 6552665938751364947}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Receiver1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3614,7 +3614,7 @@ GameObject:
   - component: {fileID: 8454348834488384624}
   - component: {fileID: 910203480194618658}
   - component: {fileID: 5539824127494390817}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Glass1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3697,7 +3697,7 @@ GameObject:
   - component: {fileID: 4113299395121383435}
   - component: {fileID: 7598346978630142621}
   - component: {fileID: 3417915841331720175}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Metal1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3780,7 +3780,7 @@ GameObject:
   - component: {fileID: 3763585998758797530}
   - component: {fileID: 8918159092349111435}
   - component: {fileID: 5671982949561038668}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cloth4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

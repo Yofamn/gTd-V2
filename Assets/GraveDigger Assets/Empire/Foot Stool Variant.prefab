@@ -156,6 +156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Foot Stool Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8096620371882215115, guid: ea3dd8cd6e3a189479e634d7e802a2d6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
