@@ -21,8 +21,14 @@ namespace TowerDefense{
             Debug.Log("Enemy HP: " + currentHealth);
         }
 
-        public void addHealth(int amount){
+        public void addHealth(int amount)
+        {
             currentHealth += amount;
+
+            if (gameObject.CompareTag("Player") && PlayerDisplay.Instance != null)
+            {
+                PlayerDisplay.Instance.UpdateHealthText(currentHealth);
+            }
         }
         void TakeDamage(int damage)
             {
