@@ -29,4 +29,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End Screen.unity
     guid: 541ddf71d3be2d34db4595b810cb3c63
+  - enabled: 1
+    path: Assets/Scenes/Final Boss.unity
+    guid: 28169c86be3bb494ea512db420952b23
+  - enabled: 1
+    path: Assets/Scenes/Deacon.unity
+    guid: 8cf5df4e982d4cc418b1cbe45eccba54
+  - enabled: 1
+    path: Assets/Scenes/Test Level - delete later or something.unity
+    guid: 4b156727023efc947b818d73577cc2db
+  - enabled: 1
+    path: Assets/Scenes/Master.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
