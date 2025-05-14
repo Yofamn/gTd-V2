@@ -1,14 +1,14 @@
 Lil' Sparrow Guy is a game that follows a Sparrow named Gary who is trapped inside a building and in an effort to keep himself from following into boredom, he fins a gaming computer and begins to play a tower defense game!
 
 
-trailer here
+trailer here(its done we just need to upload it)
 
 
 If you are unsure how to play, this video should help! 
 https://youtu.be/GxSrrZc9Ab8 
 
 
-Whow i did this video needs to be made
+"how i did this" video needs to be made
 
 
 The main branch is the default branch, it is the most updated and is the newest branch!
