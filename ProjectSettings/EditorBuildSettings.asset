@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Madigan.unity
-    guid: 06a5087449bec2b4f91b38cce04daae3
   - enabled: 1
     path: Assets/Scenes/Title.unity
     guid: fd31fb324a9636a409f47780af2323ab
@@ -17,9 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Steal Throne.unity
     guid: 8e11d5dee490fd541baf7395c1b844ff
-  - enabled: 1
-    path: Assets/Scenes/Shop UI.unity
-    guid: 2395224d7b71812469983f94c3bb580f
   - enabled: 1
     path: Assets/Scenes/City Scene.unity
     guid: a64a776aceb8e8c4a886e413cef4d579
@@ -32,13 +26,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final Boss.unity
     guid: 28169c86be3bb494ea512db420952b23
-  - enabled: 1
-    path: Assets/Scenes/Deacon.unity
-    guid: 8cf5df4e982d4cc418b1cbe45eccba54
-  - enabled: 1
-    path: Assets/Scenes/Test Level - delete later or something.unity
-    guid: 4b156727023efc947b818d73577cc2db
-  - enabled: 1
-    path: Assets/Scenes/Master.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
