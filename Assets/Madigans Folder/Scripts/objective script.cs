@@ -1,7 +1,7 @@
 using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.UI;
-using Palmmedia.ReportGenerator.Core.Parser.Analysis;
+//using Palmmedia.ReportGenerator.Core.Parser.Analysis;
 
 
 public class objectivescript: MonoBehaviour
